@@ -17,15 +17,25 @@ public class PlayerMovement : MonoBehaviour
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
 
-        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
+        
+        
     }
 
     private void FixedUpdate()
     {
         rb.MovePosition(rb.position + movement * movespeed * Time.deltaTime);
 
-        Vector2 lookDir = mousePos - rb.position;
-        float angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-        rb.rotation = angle;
+        Vector2 lookDir;
+        float angle;
+
+        if ( movement.x != 0 || movement.y != 0)
+        {
+            lookDir = new Vector2(movement.x, movement.y);
+            angle = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
+            rb.rotation = angle;
+        }
+
+
+       
     }
 }
