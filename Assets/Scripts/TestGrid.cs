@@ -13,7 +13,7 @@ public class TestGrid : MonoBehaviour
     private Grid grid;
     private void Start()
     {
-        grid = new Grid(width, height, cellSize, new Vector3(-7f, -5f));
+        grid = new Grid(width, height, cellSize, transform.position);
     }
 
     private void Update()
