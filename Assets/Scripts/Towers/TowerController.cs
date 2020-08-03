@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TowerController : MonoBehaviour
 {
+    public bool buildTower = false;
     public TowerSchematic towerSchematic;
     private Tower tower;
     private Transform projectileSpawn;
@@ -18,7 +19,7 @@ public class TowerController : MonoBehaviour
         shootTimer = shootInterval = 1 / towerSchematic.towerFireRate;
         if (towerSchematic)
         {
-            tower = new Tower(towerSchematic, transform);
+            tower = new Tower(towerSchematic, transform, buildTower);
         }
 
         // Get tower projectile spawn location from first child
