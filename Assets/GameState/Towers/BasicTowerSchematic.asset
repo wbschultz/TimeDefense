@@ -17,6 +17,6 @@ MonoBehaviour:
   towerCost: 50
   towerDamage: 20
   towerRange: 5
-  towerFireRate: 0.5
+  towerFireRate: 1
   towerPrefab: {fileID: 0}
   bulletPrefab: {fileID: 0}
