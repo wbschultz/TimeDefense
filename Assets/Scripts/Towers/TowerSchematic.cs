@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Provides default properties and behaviour for all towers.
 public abstract class TowerSchematic : ScriptableObject
 {
     [Header("Tower Defaults")]
@@ -12,11 +13,15 @@ public abstract class TowerSchematic : ScriptableObject
     public float towerRange;
     public float towerFireRate;
     public Sprite towerSprite;
-    public GameObject towerPrefab;
 
     /***************************************************************************
      * Required Tower behaviour to implement
      ***************************************************************************/
+    /**
+     * Have tower shoot target.
+     * <param name="target">Target for tower to shoot.</param>
+     * <param name="projectileSpawn">Location to spawn projectile at.</param>
+     */
     public abstract void ShootTarget(Transform target, Transform projectileSpawn);
 
 
@@ -87,7 +92,7 @@ public abstract class TowerSchematic : ScriptableObject
     }
 
     // Find closest in range target from list of targets.
-    public Transform GetClosestInRangeTarget(Transform tower, List<Transform> targets, float range)
+    public virtual Transform GetClosestInRangeTarget(Transform tower, List<Transform> targets, float range)
     {
         // Get closest target to tower and its distance.
         Transform closestTarget = GetClosestTarget(tower, targets);
@@ -106,7 +111,7 @@ public abstract class TowerSchematic : ScriptableObject
     }
 
     // Find closest target to tower from list of targets.
-    public Transform GetClosestTarget(Transform tower, List<Transform> targets)
+    public virtual Transform GetClosestTarget(Transform tower, List<Transform> targets)
     {
         Transform closestTarget = null;
         float closestTargetDistance = Mathf.Infinity;
@@ -126,6 +131,9 @@ public abstract class TowerSchematic : ScriptableObject
         return closestTarget;
     }
 
+    /***************************************************************************
+     * Default basic Tower behaviour
+     **************************************************************************/
     // Calculate cost of building {amount} towers.
     public int TowerCost(int amount)
     {
