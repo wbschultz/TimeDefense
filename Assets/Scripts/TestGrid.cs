@@ -1,0 +1,32 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using CodeMonkey.Utils;
+using UnityEngine.Diagnostics;
+
+public class TestGrid : MonoBehaviour
+{
+    public int width;
+    public int height;
+    public float cellSize;
+
+    private Grid grid;
+    private void Start()
+    {
+        grid = new Grid(width, height, cellSize, new Vector3(-7f, -5f));
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            
+            grid.SetValue(UtilsClass.GetMouseWorldPosition(), 69) ;
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Debug.Log(grid.GetValue(UtilsClass.GetMouseWorldPosition()));
+        }
+    }
+}
