@@ -42,9 +42,9 @@ public class Tower
         }
     }
 
-    public void ShootTarget(Transform target, Transform tower)
+    public void ShootTarget(Transform target, Transform projectileSpawn)
     {
-        towerSchematic.ShootTarget(target, tower);
+        towerSchematic.ShootTarget(target, projectileSpawn);
     }
 
     public bool Shoot()

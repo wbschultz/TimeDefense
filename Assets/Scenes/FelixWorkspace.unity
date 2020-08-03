@@ -216,6 +216,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: EnergyBoltTower
       objectReference: {fileID: 0}
+    - target: {fileID: 3291509172874840847, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: towerSchematic
+      value: 
+      objectReference: {fileID: 11400000, guid: 2eeaa40729bb1304ba99c3d49b21d91b,
+        type: 2}
     - target: {fileID: 3291509172874840849, guid: 72fbe1bc864af6849b078a9580a53ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -278,75 +284,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fbe1bc864af6849b078a9580a53ef7, type: 3}
---- !u!1001 &4886311840640284403
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.6215142
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.008532211
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.8428395
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140092, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
-        type: 3}
-      propertyPath: m_Name
-      value: EnergyBolt
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 491295d0556541040b53b6a5a6507ab4, type: 3}
 --- !u!1001 &5856562078897402809
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -357,12 +294,12 @@ PrefabInstance:
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.972
+      value: 1.31
       objectReference: {fileID: 0}
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.793
+      value: 6.92
       objectReference: {fileID: 0}
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}
@@ -392,7 +329,7 @@ PrefabInstance:
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}

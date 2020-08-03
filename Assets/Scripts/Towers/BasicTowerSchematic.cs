@@ -7,11 +7,18 @@ public class BasicTowerSchematic : TowerSchematic
 {
     public GameObject bulletPrefab;
 
-    public override void ShootTarget(Transform target, Transform tower)
+    public override void ShootTarget(Transform target, Transform projectileSpawn)
     {
-        if (tower && target)
+        if (projectileSpawn && target)
         {
             UnityEngine.Debug.Log("ShootTarget(): " + target.name);
+            GameObject projectileGO = Instantiate(bulletPrefab, projectileSpawn.position, projectileSpawn.rotation);
+            ProjectileController projectile = projectileGO.GetComponent<ProjectileController>();
+
+            if (projectile)
+            {
+                projectile.SetTarget(target);
+            }
         }
     }
 

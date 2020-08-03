@@ -12,7 +12,7 @@ public abstract class TowerSchematic : ScriptableObject
     public float towerFireRate;
     public GameObject towerPrefab;
 
-    public abstract void ShootTarget(Transform target, Transform tower);
+    public abstract void ShootTarget(Transform target, Transform projectileSpawn);
 
     public abstract Transform GetInRangeTarget(Transform tower, List<Transform> inRangeTargets);
 

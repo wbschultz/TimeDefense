@@ -6,6 +6,7 @@ public class TowerController : MonoBehaviour
 {
     public TowerSchematic towerSchematic;
     private Tower tower;
+    private Transform projectileSpawn;
 
     private float shootTimer = 0f;
     private float shootInterval;
@@ -19,6 +20,9 @@ public class TowerController : MonoBehaviour
         {
             tower = new Tower(towerSchematic, transform);
         }
+
+        // Get tower projectile spawn location from first child
+        if (transform.childCount > 0) projectileSpawn = transform.GetChild(0);
 
         // Setup collider dimensions using schematic range
         CircleCollider2D towerRange = GetComponent<CircleCollider2D>();
@@ -41,7 +45,7 @@ public class TowerController : MonoBehaviour
 
         if (currentTarget && shootTimer >= shootInterval)
         {
-            tower.Shoot();
+            tower.ShootTarget(currentTarget, projectileSpawn);
             shootTimer = 0f;
         }
 

@@ -9,14 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 649895eb03aa5554fbc7cc82b886949c, type: 3}
+  m_Script: {fileID: 11500000, guid: 572a8d0e1fdc5364199948ab2835e189, type: 3}
   m_Name: BasicTowerSchematic
   m_EditorClassIdentifier: 
   towerName: Energy Bolt Tower
-  towerDescription: Smite enemies with power generated ethically?
+  towerDescription: Smite your enemies with power generated ethically?
   towerCost: 50
   towerDamage: 20
   towerRange: 5
   towerFireRate: 1
-  towerPrefab: {fileID: 0}
-  bulletPrefab: {fileID: 0}
+  towerPrefab: {fileID: 3291509172874840846, guid: 72fbe1bc864af6849b078a9580a53ef7,
+    type: 3}
+  bulletPrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
+    type: 3}
