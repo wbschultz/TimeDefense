@@ -83,4 +83,21 @@ public class Grid
         GetXY(worldposition, out x, out y);
         return GetValue(x, y);
     }
+
+    /// <summary>
+    /// Return XY position on grid
+    /// </summary>
+    /// <param name="worldPosition"></param>
+    /// <returns></returns>
+    public Vector3 SnapPosition(Vector3 worldPosition)
+    {
+        int snappedX;
+        int snappedY;
+        Vector3 outPos;
+
+        GetXY(worldPosition, out snappedX, out snappedY);
+
+        outPos = new Vector3(snappedX, snappedY, worldPosition.z);
+        return outPos;
+    }
 }

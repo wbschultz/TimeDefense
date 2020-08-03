@@ -104,7 +104,7 @@ GameObject:
   - component: {fileID: 5470065876286977199}
   - component: {fileID: 1896350869945510931}
   m_Layer: 0
-  m_Name: Grunt
+  m_Name: GruntPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -29,4 +29,9 @@ public class TestGrid : MonoBehaviour
             Debug.Log(grid.GetValue(UtilsClass.GetMouseWorldPosition()));
         }
     }
+
+    public Vector3 SnapPosition(Vector3 worldPosition)
+    {
+        return grid.SnapPosition(worldPosition + transform.position) + new Vector3(0.5f, 0.5f, 0f);
+    }
 }
