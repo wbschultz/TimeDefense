@@ -2,18 +2,27 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicTowerSchematic : MonoBehaviour
+[CreateAssetMenu(fileName = "BasicTowerSchematic", menuName = "TowerSchematics/Basic")]
+public class BasicTowerSchematic : TowerSchematic
 {
+    public GameObject bulletPrefab;
 
-    // Start is called before the first frame update
-    void Start()
+    public override void ShootTarget(Transform target, Transform tower)
     {
-        
+        if (tower && target)
+        {
+            UnityEngine.Debug.Log("ShootTarget(): " + target.name);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    public override Transform GetInRangeTarget(Transform tower, List<Transform> inRangeTargets)
     {
-        
+        if (inRangeTargets.Count > 0)
+        {
+            return inRangeTargets[0];
+        } else
+        {
+            return null;
+        }
     }
 }

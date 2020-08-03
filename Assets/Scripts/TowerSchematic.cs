@@ -12,26 +12,33 @@ public abstract class TowerSchematic : ScriptableObject
     public float towerFireRate;
     public GameObject towerPrefab;
 
-    public abstract void ShootTarget(Transform target);
+    public abstract void ShootTarget(Transform target, Transform tower);
 
-    public virtual void BuildTower()
+    public abstract Transform GetInRangeTarget(Transform tower, List<Transform> inRangeTargets);
+
+    public virtual GameObject BuildTower()
     {
-        Instantiate(towerPrefab);
+        return Instantiate(towerPrefab);
     }
 
-    public virtual void BuildTower(Transform parent)
+    public virtual GameObject BuildTower(Transform parent)
     {
-        Instantiate(towerPrefab, parent);
+        return Instantiate(towerPrefab, parent);
     }
 
-    public virtual void BuildTower(Vector3 position, Quaternion rotation)
+    public virtual GameObject BuildTower(Vector3 position, Quaternion rotation)
     {
-        Instantiate(towerPrefab, position, rotation);
+        return Instantiate(towerPrefab, position, rotation);
     }
 
-    public virtual void BuildTower(Vector3 position, Quaternion rotation, Transform parent)
+    public virtual GameObject BuildTower(Vector3 position, Quaternion rotation, Transform parent)
     {
-        Instantiate(towerPrefab, position, rotation, parent);
+        return Instantiate(towerPrefab, position, rotation, parent);
+    }
+
+    public virtual void DestroyTower(GameObject tower)
+    {
+        Destroy(tower);
     }
 
     public virtual bool IsTargetInRange(Transform tower, Transform target)
@@ -40,7 +47,7 @@ public abstract class TowerSchematic : ScriptableObject
         return true;
     }
 
-    public Transform GetClosestInRangeTarget(Transform tower, List<Transform> nearbyTargets)
+    public Transform GetClosestInRangeTarget(Transform tower, List<Transform> inRangeTargets)
     {
         // TODO
         return tower;
