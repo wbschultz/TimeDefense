@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Tower
 {
+    private GameObject towerGO;
     private TowerSchematic towerSchematic;
     private Transform towerTransform;
 
@@ -12,10 +13,15 @@ public class Tower
     public float towerRange { get { return towerSchematic.towerRange; } }
     public float towerFireRate { get { return towerSchematic.towerFireRate; } }
 
-    public Tower(TowerSchematic _towerSchematic, Transform _towerTransform)
+    public Tower(TowerSchematic _towerSchematic, Transform _towerTransform, bool buildTower = false)
     {
         towerSchematic = _towerSchematic;
         towerTransform = _towerTransform;
+
+        if (buildTower)
+        {
+            towerSchematic.BuildTower(towerTransform.gameObject);
+        }
     }
 
     public void OnTargetEnterRange(Transform target)
@@ -65,7 +71,7 @@ public class Tower
 
     public void GetNewTarget()
     {
-        Transform newTarget = towerSchematic.GetInRangeTarget(towerTransform, inRangeTargets);
+        Transform newTarget = towerSchematic.ChooseInRangeTarget(towerTransform, inRangeTargets);
 
         if (newTarget)
         {
