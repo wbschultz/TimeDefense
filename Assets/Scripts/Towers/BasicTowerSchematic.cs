@@ -22,7 +22,19 @@ public class BasicTowerSchematic : TowerSchematic
             if (projectile)
             {
                 projectile.SetTarget(target);
+                projectile.SetOnHitTarget(this.HitTarget);
             }
         }
+    }
+
+    public override void HitTarget(Transform target, ProjectileController projectile)
+    {
+
+        // Hit enemy with damage and status effects.
+        Enemy enemy = target.gameObject.GetComponent<Enemy>();
+        int enemyHp = enemy.GotHit(this.towerDamage, this.statusEffect, statusDuration);
+        UnityEngine.Debug.Log("HitTarget() hp: " + enemyHp);
+        Destroy(projectile.gameObject);
+
     }
 }

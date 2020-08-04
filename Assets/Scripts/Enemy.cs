@@ -5,6 +5,8 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     public float speed = 3f;
+    public int maxHp = 100;
+    public int currentHp;
     public StatusConditionList statusConditions;
     public List<StatusCondition> effectiveStatuses;
     private List<StatusCondition> statuses = new List<StatusCondition>();
@@ -17,6 +19,7 @@ public class Enemy : MonoBehaviour
     {
         // Select enemy's target from first waypoint.
         target = Waypoints.waypoints[0];
+        currentHp = maxHp;
     }
 
     private void Update()
@@ -123,7 +126,26 @@ public class Enemy : MonoBehaviour
         statuses.Remove(status);
     }
 
-    public IEnumerator ApplyStatusCondition(StatusCondition status, float duration = 2f)
+    public int GotHit(int damage, StatusCondition appliedCondition, float duration = 0f)
+    {
+        // Reduce hp by damage taken
+        currentHp = currentHp - damage;
+
+        if (currentHp <= 0)
+        {
+            // Enemy just died.
+            Destroy(gameObject);
+        } 
+        else
+        {
+            // Apply status effects if any.
+            StartCoroutine(ApplyStatusCondition(appliedCondition, duration));
+        }
+
+        return currentHp;
+    }
+
+    public IEnumerator ApplyStatusCondition(StatusCondition status, float duration)
     {
         if (effectiveStatuses.Contains(status) && !statuses.Contains(status))
         {

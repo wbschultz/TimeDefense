@@ -10,18 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 572a8d0e1fdc5364199948ab2835e189, type: 3}
-  m_Name: BasicTowerSchematic
+  m_Name: BasicRewindTowerSchematic
   m_EditorClassIdentifier: 
-  towerName: Energy Bolt Tower
-  towerDescription: Smite your enemies with power generated ethically?
-  towerCost: 50
-  towerDamage: 15
+  towerName: Rewind Energy Bolt Tower
+  towerDescription: Rewind your enemies.
+  towerCost: 0
+  towerDamage: 5
   towerRange: 7
-  towerFireRate: 1
+  towerFireRate: 1.5
   statusDuration: 2
-  statusEffect: {fileID: 0}
-  towerSprite: {fileID: -7339316493858100551, guid: 5cf80b8209230d44bbd029e928a0c181,
-    type: 3}
+  statusEffect: {fileID: 11400000, guid: 938054cf7f4612e489005692a824ce36, type: 2}
+  towerSprite: {fileID: 0}
   towerPrefab: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
     type: 3}
   projectilePrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,

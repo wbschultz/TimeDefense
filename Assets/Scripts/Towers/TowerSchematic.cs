@@ -12,6 +12,8 @@ public abstract class TowerSchematic : ScriptableObject
     public int towerDamage;
     public float towerRange;
     public float towerFireRate;
+    public float statusDuration;
+    public StatusCondition statusEffect;
     public Sprite towerSprite;
     public GameObject towerPrefab;
 
@@ -25,6 +27,7 @@ public abstract class TowerSchematic : ScriptableObject
      */
     public abstract void ShootTarget(Transform target, Transform projectileSpawn);
 
+    public abstract void HitTarget(Transform target, ProjectileController projectile);
 
     /***************************************************************************
      * Default (Overridable) Tower behaviour

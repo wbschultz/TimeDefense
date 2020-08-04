@@ -324,6 +324,81 @@ Transform:
   m_Father: {fileID: 1816584709}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 7.28, z: 0}
+--- !u!1001 &782068036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.44146872
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.389329
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0859027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710698, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: towerSchematic
+      value: 
+      objectReference: {fileID: 11400000, guid: 33a2a8815a398864c9e45797d6013ce6,
+        type: 2}
+    - target: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_Name
+      value: EnergyBoltTower (2)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72fbe1bc864af6849b078a9580a53ef7, type: 3}
 --- !u!1 &921886645
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,11 +448,88 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+  maxHp: 1000
+  currentHp: 0
   statusConditions: {fileID: 11400000, guid: 3f3415499266f2740ad21c83002dac7b, type: 2}
   effectiveStatuses:
   - {fileID: 11400000, guid: 938054cf7f4612e489005692a824ce36, type: 2}
   - {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}
   - {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
+--- !u!1001 &1287483691
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.595077
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.42865
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0859027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710698, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: towerSchematic
+      value: 
+      objectReference: {fileID: 11400000, guid: dcf5e42cc2c703b44a3f0c4c09eaf5dc,
+        type: 2}
+    - target: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_Name
+      value: EnergyBoltTower
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72fbe1bc864af6849b078a9580a53ef7, type: 3}
 --- !u!1 &1362962080
 GameObject:
   m_ObjectHideFlags: 0
@@ -408,6 +560,81 @@ Transform:
   m_Father: {fileID: 1816584709}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 7.28, z: 0}
+--- !u!1001 &1379635245
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.7211852
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.42865
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.0859027
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3442600863614710698, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: towerSchematic
+      value: 
+      objectReference: {fileID: 11400000, guid: 40faefd22f0ef4b478ef108e5b717898,
+        type: 2}
+    - target: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
+        type: 3}
+      propertyPath: m_Name
+      value: EnergyBoltTower (1)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 72fbe1bc864af6849b078a9580a53ef7, type: 3}
 --- !u!1 &1607907213
 GameObject:
   m_ObjectHideFlags: 0
@@ -494,7 +721,7 @@ Transform:
   - {fileID: 2116137341}
   - {fileID: 497970369}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1833194369
 GameObject:
@@ -555,7 +782,7 @@ Transform:
   m_Children:
   - {fileID: 1784077689}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2116137340
 GameObject:
@@ -597,12 +824,12 @@ PrefabInstance:
     - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.8183775
+      value: -4.96
       objectReference: {fileID: 0}
     - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.4198167
+      value: -1.17
       objectReference: {fileID: 0}
     - target: {fileID: 3442600863614710692, guid: 72fbe1bc864af6849b078a9580a53ef7,
         type: 3}
@@ -701,7 +928,7 @@ PrefabInstance:
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5856562079147555896, guid: 3e25b3b315eabfa4e930f141a41ed5ec,
         type: 3}

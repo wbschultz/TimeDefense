@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   statusName: Slowed
   statusDescription: Time has slowed for you
+  modifier: 0.35
