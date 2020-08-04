@@ -85,7 +85,7 @@ public class Grid
     }
 
     /// <summary>
-    /// Return XY position on grid
+    /// Return XY position centered in grid square
     /// </summary>
     /// <param name="worldPosition"></param>
     /// <returns></returns>
@@ -97,7 +97,7 @@ public class Grid
 
         GetXY(worldPosition, out snappedX, out snappedY);
 
-        outPos = new Vector3(snappedX, snappedY, worldPosition.z);
+        outPos = new Vector3(snappedX+0.5f, snappedY+0.5f, worldPosition.z);
         return outPos;
     }
 }
