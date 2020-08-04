@@ -15,11 +15,12 @@ public class PlacementManager : MonoBehaviour
     private float cellSize = 1f;
 
     private Grid grid;
+    private GameObject player;
 
     private bool buildMode = false;
     private TowerSchematic selectedTower;
-    private readonly Color buildModeWhite = new Color(1f, 1f, 1f, 0.4f);
-    private readonly Color buildModeRed = new Color(1f, 0f, 0f, 0.3f);
+    private readonly Color buildModeWhite = new Color(1f, 1f, 1f, 0.4f);    // color for valid placement
+    private readonly Color buildModeRed = new Color(1f, 0f, 0f, 0.3f);      // color for invalid placement
 
     private void Awake()
     {
@@ -29,7 +30,7 @@ public class PlacementManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
@@ -37,8 +38,23 @@ public class PlacementManager : MonoBehaviour
     {
         if (buildMode)
         {
+            Vector3 playerToMouse;
+            if (player == null)
+            {
+                // if can't find player object, place anywhere and log error
+                Debug.LogError("Can't find obj in scene with tag 'Player'!");
+                playerToMouse = UtilsClass.GetMouseWorldPosition();
+            } else
+            {
+                // get distance vector from player to mouse
+                playerToMouse = UtilsClass.GetMouseWorldPosition() - player.transform.position;
+            }
+            
+            // reduce magnitude of vector to 3, or current magnitude, whichever is shorter
+            playerToMouse = (Mathf.Min(3f, playerToMouse.magnitude) * playerToMouse.normalized) + player.transform.position + new Vector3(0.5f, 0.5f, 0);
+            // fix ghost sprite (preview) to the mouse position
             ghostSprite.gameObject.transform.position =
-                grid.SnapPosition(UtilsClass.GetMouseWorldPosition() // position in grid
+                grid.SnapPosition(playerToMouse // position in grid
                 + transform.position); // plus offset of transform
 
             // check value in grid first
