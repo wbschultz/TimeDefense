@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4267cae096757e43883dea93e981e0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildTower: 1
+  buildTower: 0
   towerSchematic: {fileID: 11400000, guid: 2eeaa40729bb1304ba99c3d49b21d91b, type: 2}
 --- !u!58 &3442600863614710695
 CircleCollider2D:

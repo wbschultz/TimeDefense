@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public delegate void OnHitTarget(Transform target, ProjectileController projectile);
+
 public class ProjectileController : MonoBehaviour
 {
     private Transform target;
-    [Header("Projectile attributes")]
+    private OnHitTarget onHitTarget;
+
+[Header("Projectile attributes")]
     public float speed = 30f;
 
     // Set target for projectile to attack.
@@ -13,6 +17,12 @@ public class ProjectileController : MonoBehaviour
     {
         target = _target;
     }
+
+    public void SetOnHitTarget(OnHitTarget _onHitTarget)
+    {
+        onHitTarget = _onHitTarget;
+    }
+    
 
     // Update is called once per frame
     private void Update()
@@ -30,7 +40,16 @@ public class ProjectileController : MonoBehaviour
     // Projectile hit target, it's a helluva thing.
     private void HitTarget()
     {
-        Destroy(gameObject);
+        if (onHitTarget != null)
+        {
+            // Invoke on hit target behaviour requested by tower.
+            onHitTarget.Invoke(target, this);
+        }
+        else
+        {
+            // No on hit behaviour, just destroy yourself.
+            Destroy(gameObject);
+        }
     }
 
     // Seek your prey projectile like a shark.

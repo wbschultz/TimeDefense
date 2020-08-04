@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1d84e26a72c488f4f803b080f87ea1a4, type: 3}
+  m_Name: StatusConditionList
+  m_EditorClassIdentifier: 
+  stasis: {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
+  slow: {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}
+  rewind: {fileID: 11400000, guid: 938054cf7f4612e489005692a824ce36, type: 2}
