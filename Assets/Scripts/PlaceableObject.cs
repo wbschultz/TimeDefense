@@ -21,14 +21,6 @@ public class PlaceableObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isPlacing)
-        {
-            transform.position = grid.SnapPosition(UtilsClass.GetMouseWorldPosition());
-        }
 
-        if (Input.GetMouseButton(0))
-        {
-            isPlacing = false;
-        }
     }
 }
