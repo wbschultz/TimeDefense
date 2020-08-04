@@ -13,6 +13,7 @@ public abstract class TowerSchematic : ScriptableObject
     public float towerRange;
     public float towerFireRate;
     public Sprite towerSprite;
+    public GameObject towerPrefab;
 
     /***************************************************************************
      * Required Tower behaviour to implement
@@ -138,5 +139,11 @@ public abstract class TowerSchematic : ScriptableObject
     public int TowerCost(int amount)
     {
         return towerCost * amount;
+    }
+
+    // Get tower prefab.
+    public GameObject GetTowerPrefab()
+    {
+        return towerPrefab;
     }
 }
