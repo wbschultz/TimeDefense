@@ -20,7 +20,7 @@ MonoBehaviour:
   towerFireRate: 1
   towerSprite: {fileID: -7339316493858100551, guid: 5cf80b8209230d44bbd029e928a0c181,
     type: 3}
-  towerPrefab: {fileID: 3291509172874840846, guid: 72fbe1bc864af6849b078a9580a53ef7,
+  towerPrefab: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
     type: 3}
-  bulletPrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
+  projectilePrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
     type: 3}
