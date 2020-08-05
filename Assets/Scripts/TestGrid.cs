@@ -18,15 +18,11 @@ public class TestGrid : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-        {
-            
-            grid.SetValue(UtilsClass.GetMouseWorldPosition(), 69) ;
-        }
+        
+    }
 
-        if (Input.GetMouseButtonDown(1))
-        {
-            Debug.Log(grid.GetValue(UtilsClass.GetMouseWorldPosition()));
-        }
+    public Vector3 SnapPosition(Vector3 worldPosition)
+    {
+        return grid.SnapPosition(worldPosition + transform.position) + new Vector3(0.5f, 0.5f, 0f);
     }
 }
