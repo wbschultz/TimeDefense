@@ -99,7 +99,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 22
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -182,8 +182,8 @@ TextureImporter:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,10 +201,10 @@ TextureImporter:
       name: Energy ball-Sheet_1
       rect:
         serializedVersion: 2
-        x: 12
+        x: 16
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -222,10 +222,10 @@ TextureImporter:
       name: Energy ball-Sheet_2
       rect:
         serializedVersion: 2
-        x: 24
+        x: 32
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -243,10 +243,10 @@ TextureImporter:
       name: Energy ball-Sheet_3
       rect:
         serializedVersion: 2
-        x: 36
+        x: 48
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -264,10 +264,10 @@ TextureImporter:
       name: Energy ball-Sheet_4
       rect:
         serializedVersion: 2
-        x: 48
+        x: 64
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -285,10 +285,10 @@ TextureImporter:
       name: Energy ball-Sheet_5
       rect:
         serializedVersion: 2
-        x: 60
+        x: 80
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -306,10 +306,10 @@ TextureImporter:
       name: Energy ball-Sheet_6
       rect:
         serializedVersion: 2
-        x: 72
+        x: 96
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -327,10 +327,10 @@ TextureImporter:
       name: Energy ball-Sheet_7
       rect:
         serializedVersion: 2
-        x: 84
+        x: 112
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -348,10 +348,10 @@ TextureImporter:
       name: Energy ball-Sheet_8
       rect:
         serializedVersion: 2
-        x: 96
+        x: 128
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -369,10 +369,10 @@ TextureImporter:
       name: Energy ball-Sheet_9
       rect:
         serializedVersion: 2
-        x: 108
+        x: 144
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -390,10 +390,10 @@ TextureImporter:
       name: Energy ball-Sheet_10
       rect:
         serializedVersion: 2
-        x: 120
+        x: 160
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -411,10 +411,10 @@ TextureImporter:
       name: Energy ball-Sheet_11
       rect:
         serializedVersion: 2
-        x: 132
+        x: 176
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,10 +432,10 @@ TextureImporter:
       name: Energy ball-Sheet_12
       rect:
         serializedVersion: 2
-        x: 144
+        x: 192
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -453,10 +453,10 @@ TextureImporter:
       name: Energy ball-Sheet_13
       rect:
         serializedVersion: 2
-        x: 156
+        x: 208
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -474,10 +474,10 @@ TextureImporter:
       name: Energy ball-Sheet_14
       rect:
         serializedVersion: 2
-        x: 168
+        x: 224
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -495,10 +495,10 @@ TextureImporter:
       name: Energy ball-Sheet_15
       rect:
         serializedVersion: 2
-        x: 180
+        x: 240
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -516,10 +516,10 @@ TextureImporter:
       name: Energy ball-Sheet_16
       rect:
         serializedVersion: 2
-        x: 192
+        x: 256
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -537,10 +537,10 @@ TextureImporter:
       name: Energy ball-Sheet_17
       rect:
         serializedVersion: 2
-        x: 204
+        x: 272
         y: 0
-        width: 12
-        height: 12
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
