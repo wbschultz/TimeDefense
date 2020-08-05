@@ -78,4 +78,9 @@ public class TowerController : MonoBehaviour
             tower.OnTargetExitRange(other.transform);
         }
     }
+
+    private void OnMouseDown()
+    {
+        UnityEngine.Debug.Log("TowerController::OnMouseDown()");
+    }
 }

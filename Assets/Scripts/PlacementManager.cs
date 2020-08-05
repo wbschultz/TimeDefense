@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using CodeMonkey.Utils;
 
 public class PlacementManager : MonoBehaviour
@@ -18,6 +19,7 @@ public class PlacementManager : MonoBehaviour
     private GameObject player;
 
     private bool buildMode = false;
+    private bool onUpgradeMenu = false;
     private TowerSchematic selectedTower;
     private readonly Color buildModeWhite = new Color(1f, 1f, 1f, 0.4f);    // color for valid placement
     private readonly Color buildModeRed = new Color(1f, 0f, 0f, 0.3f);      // color for invalid placement
@@ -65,6 +67,7 @@ public class PlacementManager : MonoBehaviour
                 // if player clicks in valid location, build tower
                 if (Input.GetMouseButton(0))
                 {
+    
                     PlaceTower();
                 }
             } else
@@ -76,7 +79,13 @@ public class PlacementManager : MonoBehaviour
                     CancelPlacing();
                 
             }
-        } 
+        }
+    }
+
+    public void OnEnterLeaveUpgradeMenu(bool _onUpgradeMenu)
+    {
+        onUpgradeMenu = _onUpgradeMenu;
+        UnityEngine.Debug.Log("On upgrade menu: " + onUpgradeMenu.ToString());
     }
 
     /// <summary>
