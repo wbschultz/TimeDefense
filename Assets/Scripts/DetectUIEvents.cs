@@ -10,6 +10,7 @@ public class BoolUnityEvent : UnityEvent<bool> { }
 public class DetectUIEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     public BoolUnityEvent onEnterUpgradeMenu;
+    public BoolUnityEvent onExitUpgradeMenu;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -20,6 +21,6 @@ public class DetectUIEvents : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     public void OnPointerExit(PointerEventData eventData)
     {
         UnityEngine.Debug.Log("OnPointerExit upgrade Menu");
-        onEnterUpgradeMenu.Invoke(false);
+        onExitUpgradeMenu.Invoke(false);
     }
 }

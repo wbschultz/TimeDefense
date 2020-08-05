@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 using CodeMonkey.Utils;
 
 public class PlacementManager : MonoBehaviour
@@ -41,6 +42,8 @@ public class PlacementManager : MonoBehaviour
         if (buildMode)
         {
             Vector3 playerToMouse;
+            bool isMouseOverUI = EventSystem.current.IsPointerOverGameObject();
+
             if (player == null)
             {
                 // if can't find player object, place anywhere and log error
@@ -65,7 +68,7 @@ public class PlacementManager : MonoBehaviour
                 // set ghost sprite to green
                 ghostSprite.color = buildModeWhite;
                 // if player clicks in valid location, build tower
-                if (Input.GetMouseButton(0))
+                if (!isMouseOverUI && Input.GetMouseButton(0))
                 {
     
                     PlaceTower();
@@ -85,6 +88,8 @@ public class PlacementManager : MonoBehaviour
     public void OnEnterLeaveUpgradeMenu(bool _onUpgradeMenu)
     {
         onUpgradeMenu = _onUpgradeMenu;
+        if (buildMode)
+            ghostSprite.gameObject.SetActive(!onUpgradeMenu);
         UnityEngine.Debug.Log("On upgrade menu: " + onUpgradeMenu.ToString());
     }
 
@@ -112,6 +117,9 @@ public class PlacementManager : MonoBehaviour
         ghostSprite.sprite = null;
     }
 
+    /// <summary>
+    /// Build tower at current ghost sprite position
+    /// </summary>
     private void PlaceTower()
     {
         // set ghost sprite to inactive
