@@ -2,48 +2,48 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public delegate void OnHitTarget(Transform target, ProjectileController projectile);
+public delegate void OnHitTargets(List<Transform> targets, ProjectileController projectile);
 
 public class ProjectileController : MonoBehaviour
 {
-    private Transform target;
-    private OnHitTarget onHitTarget;
+    private List<Transform> targets = new List<Transform>();
+    private OnHitTargets onHitTargets;
 
-[Header("Projectile attributes")]
+    [Header("Projectile attributes")]
     public float speed = 30f;
 
     // Set target for projectile to attack.
-    public void SetTarget(Transform _target)
+    public void SetTargets(List<Transform> _targets)
     {
-        target = _target;
+        targets = _targets;
     }
 
-    public void SetOnHitTarget(OnHitTarget _onHitTarget)
+    public void SetOnHitTargets(OnHitTargets _onHitTargets)
     {
-        onHitTarget = _onHitTarget;
+        onHitTargets = _onHitTargets;
     }
     
 
     // Update is called once per frame
     private void Update()
     {
-        if (!target)
+        if (targets.Count == 0 || targets[0] == null)
         {
             // Projectile has no target, no need to exist anymore.
             Destroy(gameObject);
             return;
         }
 
-        SeekTarget();
+        SeekTargets();
     }
 
     // Projectile hit target, it's a helluva thing.
-    private void HitTarget()
+    private void HitTargets()
     {
-        if (onHitTarget != null)
+        if (onHitTargets != null)
         {
             // Invoke on hit target behaviour requested by tower.
-            onHitTarget.Invoke(target, this);
+            onHitTargets.Invoke(targets, this);
         }
         else
         {
@@ -53,16 +53,16 @@ public class ProjectileController : MonoBehaviour
     }
 
     // Seek your prey projectile like a shark.
-    private void SeekTarget()
+    private void SeekTargets()
     {
         // Determine direction and distance to target.
-        Vector3 targetDir = target.position - transform.position;
+        Vector3 targetDir = targets[0].position - transform.position;
         float distanceThisFrame = speed * Time.deltaTime;
 
         if (targetDir.magnitude <= distanceThisFrame)
         {
             // Close enough to target, count it as a hit.
-            HitTarget();
+            HitTargets();
             return;
         }
 

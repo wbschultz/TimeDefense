@@ -25,9 +25,9 @@ public abstract class TowerSchematic : ScriptableObject
      * <param name="target">Target for tower to shoot.</param>
      * <param name="projectileSpawn">Location to spawn projectile at.</param>
      */
-    public abstract void ShootTarget(Transform target, Transform projectileSpawn);
+    public abstract void ShootTargets(List<Transform> targets, List<Transform> projectileSpawns);
 
-    public abstract void HitTarget(Transform target, ProjectileController projectile);
+    public abstract void HitTargets(List<Transform> targets, ProjectileController projectile);
 
     /***************************************************************************
      * Default (Overridable) Tower behaviour
@@ -53,17 +53,19 @@ public abstract class TowerSchematic : ScriptableObject
     }
 
     // Default behaviour for targeting in range targets.
-    public virtual Transform ChooseInRangeTarget(Transform tower, List<Transform> inRangeTargets)
+    public virtual List<Transform> ChooseInRangeTargets(Transform tower, List<Transform> inRangeTargets)
     {
         if (inRangeTargets.Count > 0)
         {
             // Target first enemy to enter tower range.
-            return inRangeTargets[0];
+            List<Transform> targets = new List<Transform>();
+            targets.Add(inRangeTargets[0]);
+            return targets;
         }
         else
         {
             // No in range targets, no target.
-            return null;
+            return new List<Transform>();
         }
     }
 
@@ -101,7 +103,6 @@ public abstract class TowerSchematic : ScriptableObject
         // Get closest target to tower and its distance.
         Transform closestTarget = GetClosestTarget(tower, targets);
         float closestDistance = GetTargetDistance(tower, closestTarget);
-
 
         if (IsTargetInRange(tower, closestTarget, range))
         {

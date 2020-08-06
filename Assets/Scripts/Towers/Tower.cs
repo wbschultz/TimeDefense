@@ -8,8 +8,8 @@ public class Tower
     private TowerSchematic towerSchematic;
     private Transform towerTransform;
     // Tower Target information.
-    private Transform currentTarget;
-    public List<Transform> inRangeTargets = new List<Transform>();
+    private List<Transform> currentTargets = new List<Transform>();
+    public List<Transform> inRangeEnemies = new List<Transform>();
     // Tower stats.
     public float towerRange { get { return towerSchematic.towerRange; } }
     public float towerFireRate { get { return towerSchematic.towerFireRate; } }
@@ -33,58 +33,48 @@ public class Tower
     // Call when new target enters tower range.
     public void OnTargetEnterRange(Transform target)
     {
-        if (!inRangeTargets.Contains(target))
+        if (!inRangeEnemies.Contains(target))
         {
             // Only add target if not already added to in range list.
-            inRangeTargets.Add(target);
+            inRangeEnemies.Add(target);
 
-            if (!currentTarget)
+            if (currentTargets.Count == 0)
             {
                 // If tower isn't targeting anyone yet, attack new target.
-                currentTarget = target;
+                GetNewTargets();
             }
         }
     }
 
     // Get tower's current target.
-    public Transform GetCurrentTarget()
+    public List<Transform> GetCurrentTargets()
     {
-        return currentTarget;
+        return currentTargets;
     }
 
     // Call when a target exits tower range.
     public void OnTargetExitRange(Transform target)
     {
-        inRangeTargets.Remove(target);
+        inRangeEnemies.Remove(target);
 
-        // Current target out of range, update current target;
-        if (target == currentTarget)
+        // Current target out of range, update current targets.
+        if (currentTargets.Contains(target))
         {
-            GetNewTarget();
+            GetNewTargets();
         }
     }
 
     // Have tower shoot target while spawning projecting at this location.
-    public void ShootTarget(Transform target, Transform projectileSpawn)
+    public void ShootTargets(List<Transform> targets, List<Transform> projectileSpawns)
     {
-        towerSchematic.ShootTarget(target, projectileSpawn);
+        towerSchematic.ShootTargets(targets, projectileSpawns);
     }
 
     // Have tower choose new target from in range targets.
-    private void GetNewTarget()
+    private void GetNewTargets()
     {
         // Choose target based of tower types behaviour.
-        Transform newTarget = towerSchematic.ChooseInRangeTarget(towerTransform, inRangeTargets);
-
-        if (newTarget)
-        {
-            // Received target, shoot it.
-            currentTarget = newTarget;
-        }
-        else
-        {
-            // No target in range, don't shoot.
-            currentTarget = null;
-        }
+        List<Transform> newTargets = towerSchematic.ChooseInRangeTargets(towerTransform, inRangeEnemies);
+        currentTargets = newTargets;
     }
 }

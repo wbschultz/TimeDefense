@@ -9,7 +9,7 @@ public class TowerController : MonoBehaviour
     public TowerSchematic towerSchematic;
     // Tower behaviour and attributes.
     private Tower tower;
-    private Transform projectileSpawn;
+    private List<Transform> projectileSpawns = new List<Transform>();
     // Tower's shooting properties.
     private float shootTimer = 0f;
     private float shootInterval;
@@ -24,8 +24,15 @@ public class TowerController : MonoBehaviour
             tower = new Tower(towerSchematic, transform, buildTower);
         }
 
-        // Get tower projectile spawn location from first child.
-        if (transform.childCount > 0) projectileSpawn = transform.GetChild(0);
+        // Get tower projectile spawn locations from children.
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            Transform child = transform.GetChild(i);
+            if(child.tag == "ProjectileSpawn")
+            {
+                projectileSpawns.Add(child);
+            }
+        }
 
         // Setup tower range w/collider dimensions using schematic range.
         CircleCollider2D towerRange = GetComponent<CircleCollider2D>();
@@ -46,12 +53,12 @@ public class TowerController : MonoBehaviour
     private void ShootIfTargetInRange()
     {
         // Get tower's current target.
-        Transform currentTarget = tower.GetCurrentTarget();
+        List<Transform> currentTargets = tower.GetCurrentTargets();
 
         // Shoot target if timer is up and it exists.
-        if (currentTarget && shootTimer >= shootInterval)
+        if (currentTargets.Count > 0 && shootTimer >= shootInterval)
         {
-            tower.ShootTarget(currentTarget, projectileSpawn);
+            tower.ShootTargets(currentTargets, projectileSpawns);
             shootTimer = 0f;
         }
 
