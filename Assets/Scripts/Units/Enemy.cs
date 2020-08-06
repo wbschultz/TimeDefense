@@ -7,7 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed = 3f;
     public int maxHp = 100;
     public int currentHp;
-    public StatusConditionList statusConditions;
+    public StatusConditionIndex statusConditionIndex;
     public List<StatusCondition> effectiveStatuses;
     private List<StatusCondition> statuses = new List<StatusCondition>();
     private float speedModifier = 1f;
@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     {
         float currentSpeed = speed * speedModifier;
 
-        if (statuses.Contains(statusConditions.stasis))
+        if (statuses.Contains(statusConditionIndex.stasis))
         {
             // Enemy is stopped, it can't move.
             return;
@@ -44,7 +44,7 @@ public class Enemy : MonoBehaviour
         float distanceToWaypoint = Vector2.Distance(transform.position, target.position);
         if (distanceToWaypoint <= 0.1f)
         {
-            if (statuses.Contains(statusConditions.rewind))
+            if (statuses.Contains(statusConditionIndex.rewind))
             {
                 // Enemy is rewinded, go backwards.
                 GoToEarlierWaypoint();
@@ -85,12 +85,12 @@ public class Enemy : MonoBehaviour
 
     private void ActivateStatusEffect(StatusCondition status)
     {
-        if (status == statusConditions.slow)
+        if (status == statusConditionIndex.slow)
         {
             // Enemy slowed, slow their speed.
             speedModifier = status.modifier;
         }
-        else if (status == statusConditions.rewind)
+        else if (status == statusConditionIndex.rewind)
         {
             // Enemy rewinded, go to previous waypoint.
             waypointIndex--;
@@ -105,12 +105,12 @@ public class Enemy : MonoBehaviour
 
     private void RemoveStatusEffect(StatusCondition status)
     {
-        if (status == statusConditions.slow)
+        if (status == statusConditionIndex.slow)
         {
             // Slow is removed, reset enemy speed.
             speedModifier = 1f;
         } 
-        else if (status == statusConditions.rewind)
+        else if (status == statusConditionIndex.rewind)
         {
             // Rewind is removed, enemy should go to next waypoint.
             waypointIndex++;

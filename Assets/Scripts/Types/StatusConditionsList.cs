@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "EffectiveStatuses", menuName = "Types/EffectiveStatuses")]
-public class EffectiveStatuses : ScriptableObject
+[CreateAssetMenu(fileName = "EffectiveStatuses", menuName = "Types/StatusConditionList")]
+public class StatusConditionList : ScriptableObject
 {
     private HashSet<StatusCondition> statuses = new HashSet<StatusCondition>();
     public List<StatusCondition> statusConditions = new List<StatusCondition>();

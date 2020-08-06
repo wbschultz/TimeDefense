@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "StatusConditionList", menuName = "Types/StatusConditionList")]
-public class StatusConditionList : ScriptableObject
+[CreateAssetMenu(fileName = "StatusConditionIndex", menuName = "Types/StatusConditionIndex")]
+public class StatusConditionIndex : ScriptableObject
 {
     public StatusCondition stasis;
     public StatusCondition slow;

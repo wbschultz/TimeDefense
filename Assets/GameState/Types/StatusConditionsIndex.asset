@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1d84e26a72c488f4f803b080f87ea1a4, type: 3}
-  m_Name: StatusConditionList
+  m_Name: StatusConditionsIndex
   m_EditorClassIdentifier: 
   stasis: {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
   slow: {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}

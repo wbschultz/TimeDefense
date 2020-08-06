@@ -136,7 +136,8 @@ MonoBehaviour:
   speed: 3
   maxHp: 20
   currentHp: 0
-  statusConditions: {fileID: 11400000, guid: 3f3415499266f2740ad21c83002dac7b, type: 2}
+  statusConditionIndex: {fileID: 11400000, guid: 3f3415499266f2740ad21c83002dac7b,
+    type: 2}
   effectiveStatuses:
   - {fileID: 11400000, guid: 938054cf7f4612e489005692a824ce36, type: 2}
   - {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}
