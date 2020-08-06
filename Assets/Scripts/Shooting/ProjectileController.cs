@@ -6,6 +6,7 @@ public delegate void OnHitTargets(List<Transform> targets, ProjectileController 
 
 public abstract class ProjectileController : MonoBehaviour
 {
+    public GameObject projectileImpact;
     protected List<Transform> targets = new List<Transform>();
     protected OnHitTargets onHitTargets;
 
@@ -29,7 +30,10 @@ public abstract class ProjectileController : MonoBehaviour
         if (onHitTargets != null)
         {
             // Invoke on hit target behaviour requested by tower.
+            GameObject effects = Instantiate(projectileImpact, transform.position, transform.rotation);
+            Destroy(effects, 2f);
             onHitTargets.Invoke(targets, this);
+            
         }
         else
         {
