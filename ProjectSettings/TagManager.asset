@@ -9,6 +9,7 @@ TagManager:
   - Enemy
   - Waypoint
   - ProjectileSpawn
+  - Core
   layers:
   - Default
   - TransparentFX
