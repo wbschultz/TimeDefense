@@ -1,10 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 using CodeMonkey.Utils;
 
+/// <summary>
+/// Class to manage placement of towers, a grid for that placement,
+/// and validation of the player-selected location.
+/// </summary>
 public class PlacementManager : MonoBehaviour
 {
     [SerializeField]
@@ -19,11 +24,12 @@ public class PlacementManager : MonoBehaviour
     private Grid grid;
     private GameObject player;
 
-    private bool buildMode = false;
     private bool onUpgradeMenu = false;
     private TowerSchematic selectedTower;
     private readonly Color buildModeWhite = new Color(1f, 1f, 1f, 0.4f);    // color for valid placement
     private readonly Color buildModeRed = new Color(1f, 0f, 0f, 0.3f);      // color for invalid placement
+
+    public bool buildMode = false;
 
     private void Awake()
     {
