@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5856562079147555897}
   - component: {fileID: 5856562079147556038}
   - component: {fileID: 5856562079147555899}
+  - component: {fileID: 1285608749}
   m_Layer: 0
   m_Name: BasicEnemy
   m_TagString: Enemy
@@ -26,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5856562079147556039}
-  m_LocalRotation: {x: -0.039308302, y: -0, z: -0, w: 0.99922717}
+  m_LocalRotation: {x: -0.039312165, y: 0, z: 0, w: 0.999227}
   m_LocalPosition: {x: 1.972, y: 2.793, z: -1.5474184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -71,7 +72,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_Sprite: {fileID: 21300000, guid: a4324c51174e76349a3ca0f09aa7e3e4, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -120,3 +121,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &1285608749
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5856562079147556039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb4330baef516e340a570bc35c09b3d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
+  maxHp: 20
+  currentHp: 0
+  statusConditionIndex: {fileID: 11400000, guid: 3f3415499266f2740ad21c83002dac7b,
+    type: 2}
+  effectiveStatuses:
+  - {fileID: 11400000, guid: 938054cf7f4612e489005692a824ce36, type: 2}
+  - {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}
+  - {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
