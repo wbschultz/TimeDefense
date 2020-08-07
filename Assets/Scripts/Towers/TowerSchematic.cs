@@ -5,17 +5,22 @@ using UnityEngine;
 // Provides default properties and behaviour for all towers.
 public abstract class TowerSchematic : ScriptableObject
 {
-    [Header("Tower Defaults")]
+    [Header("Tower Specs")]
     public string towerName;
     public string towerDescription;
     public int towerCost;
     public int towerDamage;
     public float towerRange;
     public float towerFireRate;
+    [Header("Tower Status Effects")]
     public float statusDuration;
     public StatusCondition statusEffect;
+    [Header("Tower Appearance")]
     public Sprite towerSprite;
     public GameObject towerPrefab;
+    [Header("Tower Upgrades")]
+    public List<TowerSchematic> towerUpgrades;
+
 
     /***************************************************************************
      * Required Tower behaviour to implement

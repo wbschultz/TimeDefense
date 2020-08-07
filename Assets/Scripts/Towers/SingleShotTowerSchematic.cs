@@ -31,12 +31,18 @@ public class SingleShotTowerSchematic : TowerSchematic
     {
 
         // Hit enemy with damage and status effects.
-        if (targets.Count > 0)
+        foreach (Transform target in targets)
         {
-            Enemy enemy = targets[0].gameObject.GetComponent<Enemy>();
+            Enemy enemy = target.gameObject.GetComponent<Enemy>();
             int enemyHp = enemy.GotHit(this.towerDamage, this.statusEffect, statusDuration);
-            UnityEngine.Debug.Log("HitTarget() hp: " + enemyHp);
             Destroy(projectile.gameObject);
         }
+    //    if (targets.Count > 0)
+      //  {
+        //    Enemy enemy = targets[0].gameObject.GetComponent<Enemy>();
+          //  int enemyHp = enemy.GotHit(this.towerDamage, this.statusEffect, statusDuration);
+           // UnityEngine.Debug.Log("HitTarget() hp: " + enemyHp);
+           // Destroy(projectile.gameObject);
+        //}
     }
 }

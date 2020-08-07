@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
-public class SingleProjectileController : ProjectileController
+public class ExplosionProjectileController : ProjectileController
 {
+    public float explosionRadius = 3f;
+    private List<Transform> hitTargets = new List<Transform>();
     // Update is called once per frame
     private void Update()
     {
@@ -27,12 +28,25 @@ public class SingleProjectileController : ProjectileController
 
         if (targetDir.magnitude <= distanceThisFrame)
         {
-            // Close enough to target, count it as a hit.
-            HitTargets(targets);
+            // Close enough to target, explode and hit targets in range.
+            GetTargetsInExplosion();
+            HitTargets(hitTargets);
             return;
         }
 
         // Continue chasing target if not close enough.
         transform.Translate(targetDir.normalized * distanceThisFrame, Space.World);
+    }
+
+    // Get all targets that are caught in explosion.
+    private void GetTargetsInExplosion()
+    {
+        UnityEngine.Debug.Log("GetTargetsInExplosion");
+        // Add each target in explosion radius to list of hit targets.
+        Collider2D[] targetsInExplosion = Physics2D.OverlapCircleAll(transform.position, explosionRadius, LayerMask.GetMask("Enemy"));
+        foreach(Collider2D targetCollider in targetsInExplosion)
+        {
+            hitTargets.Add(targetCollider.transform);
+        }
     }
 }

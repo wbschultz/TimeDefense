@@ -6,9 +6,11 @@ public delegate void OnHitTargets(List<Transform> targets, ProjectileController 
 
 public abstract class ProjectileController : MonoBehaviour
 {
+    [Header("Projectile attributes")]
+    public float speed = 30f;
     public GameObject projectileImpact;
-    protected List<Transform> targets = new List<Transform>();
     protected OnHitTargets onHitTargets;
+    protected List<Transform> targets = new List<Transform>();
 
     // Set target for projectile to attack.
     public void SetTargets(List<Transform> _targets)
@@ -23,16 +25,19 @@ public abstract class ProjectileController : MonoBehaviour
     }
 
     // When reach/hit targets
-    protected virtual void HitTargets()
+    protected virtual void HitTargets(List<Transform> hitTargets)
     {
         UnityEngine.Debug.Log("onHitTargets");
 
         if (onHitTargets != null)
         {
             // Invoke on hit target behaviour requested by tower.
-            GameObject effects = Instantiate(projectileImpact, transform.position, transform.rotation);
-            Destroy(effects, 2f);
-            onHitTargets.Invoke(targets, this);
+            if (projectileImpact)
+            {
+                GameObject effects = Instantiate(projectileImpact, transform.position, transform.rotation);
+                Destroy(effects, 2f);
+            }
+            onHitTargets.Invoke(hitTargets, this);
             
         }
         else
