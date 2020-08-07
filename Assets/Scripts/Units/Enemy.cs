@@ -12,19 +12,46 @@ public class Enemy : MonoBehaviour
     private List<StatusCondition> statuses = new List<StatusCondition>();
     private float speedModifier = 1f;
     private int waypointIndex = 0;
+    private Transform[] waypoints = new Transform[0];
     private Transform target;
 
 
     private void Start()
     {
+        UnityEngine.Debug.Log("Enemy::Start()");
         // Select enemy's target from first waypoint.
-        target = Waypoints.waypoints[0];
         currentHp = maxHp;
     }
 
     private void Update()
     {
         Move();
+    }
+
+    public void SetWaypoints(Transform[] _waypoints)
+    {
+        UnityEngine.Debug.Log("Enemy::SetWaypoints()");
+        waypoints = _waypoints;
+        if (waypoints.Length > 0) target = waypoints[0];
+    }
+
+    public int GotHit(int damage, StatusCondition appliedCondition, float duration = 0f)
+    {
+        // Reduce hp by damage taken
+        currentHp = currentHp - damage;
+
+        if (currentHp <= 0)
+        {
+            // Enemy just died.
+            Destroy(gameObject);
+        }
+        else
+        {
+            // Apply status effects if any.
+            StartCoroutine(ApplyStatusCondition(appliedCondition, duration));
+        }
+
+        return currentHp;
     }
 
     private void Move()
@@ -59,7 +86,7 @@ public class Enemy : MonoBehaviour
 
     private void GoToLaterWaypoint()
     {
-        if (waypointIndex >= Waypoints.waypoints.Length - 1)
+        if (waypointIndex >= waypoints.Length - 1)
         {
             // Enemy reached destination.
             Destroy(gameObject);
@@ -68,7 +95,7 @@ public class Enemy : MonoBehaviour
 
         // Not yet reached destination, go to next waypoint.
         waypointIndex++;
-        target = Waypoints.waypoints[waypointIndex];
+        target = waypoints[waypointIndex];
     }
 
     private void GoToEarlierWaypoint()
@@ -80,7 +107,7 @@ public class Enemy : MonoBehaviour
         }
 
         waypointIndex--;
-        target = Waypoints.waypoints[waypointIndex];
+        target = waypoints[waypointIndex];
     }
 
     private void ActivateStatusEffect(StatusCondition status)
@@ -96,7 +123,7 @@ public class Enemy : MonoBehaviour
             waypointIndex--;
             if (waypointIndex <= 0) waypointIndex = 0;
 
-            target = Waypoints.waypoints[waypointIndex];
+            target = waypoints[waypointIndex];
         }
 
         // Add status to enemy's status conditions.
@@ -114,38 +141,19 @@ public class Enemy : MonoBehaviour
         {
             // Rewind is removed, enemy should go to next waypoint.
             waypointIndex++;
-            if (waypointIndex >= Waypoints.waypoints.Length - 1)
+            if (waypointIndex >= waypoints.Length - 1)
             {
-                waypointIndex = Waypoints.waypoints.Length - 1;
+                waypointIndex = waypoints.Length - 1;
             }
 
-            target = Waypoints.waypoints[waypointIndex];
+            target = waypoints[waypointIndex];
         }
 
         // Remove status condition from enemy.
         statuses.Remove(status);
     }
 
-    public int GotHit(int damage, StatusCondition appliedCondition, float duration = 0f)
-    {
-        // Reduce hp by damage taken
-        currentHp = currentHp - damage;
-
-        if (currentHp <= 0)
-        {
-            // Enemy just died.
-            Destroy(gameObject);
-        } 
-        else
-        {
-            // Apply status effects if any.
-            StartCoroutine(ApplyStatusCondition(appliedCondition, duration));
-        }
-
-        return currentHp;
-    }
-
-    public IEnumerator ApplyStatusCondition(StatusCondition status, float duration)
+    private IEnumerator ApplyStatusCondition(StatusCondition status, float duration)
     {
         if (effectiveStatuses.Contains(status) && !statuses.Contains(status))
         {

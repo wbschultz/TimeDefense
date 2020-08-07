@@ -6,7 +6,8 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public Transform enemyprefab;
+    public GameObject enemyprefab;
+    public Waypoints waypoints;
 
     public Transform spawnPoint;
     public float delayBetweenEnemies;
@@ -16,6 +17,7 @@ public class EnemySpawner : MonoBehaviour
     private bool isSpawning = false;
     private int waveNumber = 0;
     private List<float> timeBetweenSpawns = new List<float>();
+
     private void Start()
     {
         timeBetweenSpawns.Add(0f);
@@ -59,7 +61,10 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
-        Instantiate(enemyprefab, spawnPoint.position, spawnPoint.rotation);
+        GameObject enemyGO = Instantiate(enemyprefab, spawnPoint.position, spawnPoint.rotation);
+        // Set enemy's path with waypoints.
+        Enemy enemy = enemyGO.GetComponent<Enemy>();
+        if (enemy) enemy.SetWaypoints(waypoints.GetWaypoints());
 
     }
 }

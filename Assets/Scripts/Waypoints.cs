@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Waypoints : MonoBehaviour
 {
-    public static Transform[] waypoints;
+    private Transform[] waypoints;
 
     private void Awake()
     {
@@ -14,5 +14,10 @@ public class Waypoints : MonoBehaviour
         {
             waypoints[i] = transform.GetChild(i);
         }
+    }
+
+    public Transform[] GetWaypoints()
+    {
+        return waypoints;
     }
 }
