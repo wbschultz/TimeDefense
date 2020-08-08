@@ -57,6 +57,15 @@ public abstract class TowerSchematic : ScriptableObject
         Destroy(tower);
     }
 
+    // Play tower audio affect.
+    public virtual void PlayTowerSound(AudioSource towerSound)
+    {
+        if (towerSound)
+        {
+            towerSound.Play();
+        }
+    }
+
     // Default behaviour for targeting in range targets.
     public virtual List<Transform> ChooseInRangeTargets(Transform tower, List<Transform> inRangeTargets)
     {

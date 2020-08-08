@@ -17,9 +17,8 @@ public class TowerController : MonoBehaviour
 
     void Awake()
     {
-        shootTimer = shootInterval = 1 / towerSchematic.towerFireRate;
-
         // Initialize shoot timer and create tower of towerSchematic type.
+        shootTimer = shootInterval = 1 / towerSchematic.towerFireRate;
         if (towerSchematic && buildTower)
         {
             towerSchematic.BuildTower(transform.gameObject);
@@ -31,6 +30,9 @@ public class TowerController : MonoBehaviour
         {
             towerRange.radius = towerSchematic.towerRange;
         }
+
+        // Get and play build sound effect.
+        towerSchematic.PlayTowerSound(gameObject.GetComponent<AudioSource>());
 
         // Get tower projectile spawn locations from children.
         for (int i = 0; i < transform.childCount; i++)
