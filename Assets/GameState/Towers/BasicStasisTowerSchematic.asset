@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Stasis Energy Bolt Tower
   towerDescription: It is I DIO. STOP!
-  towerCost: 20
-  towerDamage: 2
-  towerRange: 7
-  towerFireRate: 5
+  towerCost: 175
+  towerDamage: 0
+  towerRange: 4
+  towerFireRate: 0.25
   statusDuration: 1.5
   statusEffect: {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
   towerSprite: {fileID: 21300000, guid: 526ae7eb5dcc83f4cb6630dce4535d09, type: 3}
   towerPrefab: {fileID: 3442600863614710699, guid: ad54ffb381e6e484a87d8f69f5d0350f,
     type: 3}
   towerUpgrades: []
-  projectilePrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
+  projectilePrefab: {fileID: 5626672475748726832, guid: a1a8bac1f428647438f6bc7d62003212,
     type: 3}
