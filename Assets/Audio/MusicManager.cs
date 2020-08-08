@@ -42,6 +42,9 @@ public class MusicManager : MonoBehaviour
     private void Start()
     {
         track_number = 0;
+
+        SetMusicVolume(music_vol);
+        SetEffectsVolume(effects_vol);
     }
 
     void Update()
@@ -145,6 +148,8 @@ public class MusicManager : MonoBehaviour
     }
     public void SetMusicVolume(float vol)
     {
+
+        music_vol = vol;
         if (vol > 1)
             vol = 1;
         else if (vol < 0)

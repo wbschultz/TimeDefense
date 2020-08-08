@@ -823,7 +823,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4874552048333767688}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 144.79218, y: -189.75836, z: -79.287895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -852,8 +852,8 @@ MonoBehaviour:
   transition: 0
   transition_rate: 0.02
   effects_source: {fileID: 4874552047741989562}
-  music_slider: {fileID: 0}
-  effects_slider: {fileID: 0}
+  music_vol: 0.2
+  effects_vol: 0.2
 --- !u!1 &4874552048410070316
 GameObject:
   m_ObjectHideFlags: 0

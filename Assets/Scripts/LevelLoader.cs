@@ -2,9 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Events;
 
 public class LevelLoader : MonoBehaviour
 {
+    // not necessary, but used to start title music right now
+    public UnityEvent onStart;
+
+    private void Start()
+    {
+        onStart.Invoke();
+    }
+
     /// <summary>
     /// Load level by build index
     /// </summary>
@@ -31,6 +40,9 @@ public class LevelLoader : MonoBehaviour
         LoadLevel(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
+    /// <summary>
+    /// Quit game
+    /// </summary>
     public void QuitGame()
     {
         Application.Quit();

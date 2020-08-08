@@ -15,6 +15,8 @@ public class Enemy : MonoBehaviour
     private int waypointIndex = 0;
     private Transform[] waypoints = new Transform[0];
     private Transform target;
+    public int deadPool = 10;
+    public PlayerData dataPlayer;
 
 
     private void Start()
@@ -43,8 +45,10 @@ public class Enemy : MonoBehaviour
 
         if (currentHp <= 0)
         {
+            dataPlayer.GainMoney(deadPool);
             // Enemy just died.
             Destroy(gameObject);
+
         }
         else
         {

@@ -21,6 +21,8 @@ public class PlacementManager : MonoBehaviour
     [SerializeField]
     private float cellSize = 1f;
 
+    public PlayerData dataPlayer;
+
     private Grid grid;
     private GameObject player;
 
@@ -74,7 +76,7 @@ public class PlacementManager : MonoBehaviour
                 // set ghost sprite to green
                 ghostSprite.color = buildModeWhite;
                 // if player clicks in valid location, build tower
-                if (!isMouseOverUI && Input.GetMouseButton(0))
+                if (!isMouseOverUI && Input.GetMouseButton(0) )
                 {
     
                     PlaceTower();
@@ -105,11 +107,14 @@ public class PlacementManager : MonoBehaviour
     /// <param name="prefabToPlace"></param>
     public void StartPlacing(TowerSchematic prefabToPlace)
     {
-        selectedTower = prefabToPlace;
-        ghostSprite.gameObject.SetActive(true);
-        //set sprite source
-        ghostSprite.sprite = selectedTower.towerSprite;
-        buildMode = true;
+        if (dataPlayer.EnoughMoney(prefabToPlace.towerCost))
+        {
+            selectedTower = prefabToPlace;
+            ghostSprite.gameObject.SetActive(true);
+            //set sprite source
+            ghostSprite.sprite = selectedTower.towerSprite;
+            buildMode = true;
+        }
     }
 
     /// <summary>
@@ -128,6 +133,7 @@ public class PlacementManager : MonoBehaviour
     /// </summary>
     private void PlaceTower()
     {
+
         // set ghost sprite to inactive
         ghostSprite.gameObject.SetActive(false);
         // turn off build mode
@@ -140,8 +146,9 @@ public class PlacementManager : MonoBehaviour
             for (int y = -1; y <= 1; y++)
             {
                 grid.SetValue(tower.transform.position + new Vector3(x, y, 0), 1);
+                
             }
         }
-
+        dataPlayer.SpendMoney(selectedTower.towerCost);
     }
 }

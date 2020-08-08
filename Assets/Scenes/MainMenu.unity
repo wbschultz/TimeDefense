@@ -1203,6 +1203,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1487131517}
   - component: {fileID: 1487131518}
+  - component: {fileID: 1487131519}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -1278,10 +1279,33 @@ MonoBehaviour:
   m_MinValue: 0
   m_MaxValue: 1
   m_WholeNumbers: 0
-  m_Value: 0
+  m_Value: 0.3
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1487131519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487131516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6247a58564110af4c9b612b77e1bf2e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1536504942
 GameObject:
   m_ObjectHideFlags: 0
@@ -1809,6 +1833,87 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &2065104697
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4874552048333767688, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_Name
+      value: Audio_Group
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 144.79218
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -189.75836
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -79.287895
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4874552048333767799, guid: aaa80cf4c037e19488b36606bd137634,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: aaa80cf4c037e19488b36606bd137634, type: 3}
+--- !u!114 &2065104698 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2173952912890955036, guid: aaa80cf4c037e19488b36606bd137634,
+    type: 3}
+  m_PrefabInstance: {fileID: 2065104697}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94c7261244fbac48af93ca4992b7319, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2073898721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1918,6 +2023,36 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2065104698}
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: PlayTitle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690790925423312876, guid: 520715a6f17ee7446949b167bb61b7a3,
+        type: 3}
+      propertyPath: onStart.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 1690790925423312877, guid: 520715a6f17ee7446949b167bb61b7a3,
         type: 3}
       propertyPath: m_Name
