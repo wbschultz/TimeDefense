@@ -7,7 +7,7 @@ public class CentralCore : MonoBehaviour
 {
     // health of core
     [SerializeField]
-    private float health = 100f;
+    private int health = 200;
 
     // components
 
@@ -30,7 +30,7 @@ public class CentralCore : MonoBehaviour
     /// Apply damage to core health
     /// </summary>
     /// <param name="dmg">amount of damage to deal</param>
-    public void DamageCore(float dmg)
+    public void DamageCore(int dmg)
     {
         health -= dmg;
         if (onDamage != null)

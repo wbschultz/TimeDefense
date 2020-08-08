@@ -20,8 +20,9 @@ MonoBehaviour:
   towerFireRate: 2
   statusDuration: 2
   statusEffect: {fileID: 11400000, guid: 48e94eba259acf141be2d42d22a805c0, type: 2}
-  towerSprite: {fileID: 0}
-  towerPrefab: {fileID: 3442600863614710699, guid: 72fbe1bc864af6849b078a9580a53ef7,
+  towerSprite: {fileID: 21300000, guid: cae86ad667de06141a413954b0fe8f0a, type: 3}
+  towerPrefab: {fileID: 3442600863614710699, guid: 9ba3e8e14033fba4faa478257f36adca,
     type: 3}
+  towerUpgrades: []
   projectilePrefab: {fileID: 4886311839559140094, guid: 491295d0556541040b53b6a5a6507ab4,
     type: 3}

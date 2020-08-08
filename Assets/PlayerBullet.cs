@@ -6,6 +6,8 @@ public class PlayerBullet : MonoBehaviour
 {
     [SerializeField]
     int despawnDelay = 5;
+    [SerializeField]
+    int damage = 3;
 
     private Coroutine despawn;
     // Start is called before the first frame update
@@ -30,7 +32,8 @@ public class PlayerBullet : MonoBehaviour
         if (collision.gameObject.CompareTag("Enemy"))
         {
             // Do enemy stuff
-            print("hit!");
+            collision.gameObject.GetComponent<Enemy>().GotHit(3, null);
+
             // kill projectile
             Destroy(gameObject);
         }

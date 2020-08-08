@@ -7,6 +7,7 @@ public class Enemy : MonoBehaviour
     public float speed = 3f;
     public int maxHp = 100;
     public int currentHp;
+    public int attackDmg = 2;
     public StatusConditionIndex statusConditionIndex;
     public List<StatusCondition> effectiveStatuses;
     private List<StatusCondition> statuses = new List<StatusCondition>();
@@ -89,6 +90,11 @@ public class Enemy : MonoBehaviour
         if (waypointIndex >= waypoints.Length - 1)
         {
             // Enemy reached destination.
+            // Do attack
+            CentralCore core = FindObjectOfType<CentralCore>();
+            // Apply effect
+            core.DamageCore(attackDmg);
+            // 
             Destroy(gameObject);
             return;
         }

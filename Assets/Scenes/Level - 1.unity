@@ -4357,7 +4357,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: df56436d3b43d4247beb33e2ddcdb136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -17817,7 +17817,7 @@ GameObject:
   m_Component:
   - component: {fileID: 626325023}
   - component: {fileID: 626325024}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: energy ball alone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17876,7 +17876,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: df56436d3b43d4247beb33e2ddcdb136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -18068,7 +18068,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 637419334}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165035972}
+        m_MethodName: StartPlacing
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: dcf5e42cc2c703b44a3f0c4c09eaf5dc,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TowerSchematic, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &637419334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18254,7 +18266,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 731097965}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165035972}
+        m_MethodName: StartPlacing
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 33a2a8815a398864c9e45797d6013ce6,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TowerSchematic, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &731097965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19669,7 +19693,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1199294824}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165035972}
+        m_MethodName: StartPlacing
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 40faefd22f0ef4b478ef108e5b717898,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TowerSchematic, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1199294824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19776,7 +19812,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: df56436d3b43d4247beb33e2ddcdb136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -20794,7 +20830,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: df56436d3b43d4247beb33e2ddcdb136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -21123,7 +21159,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1664802399}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 165035972}
+        m_MethodName: StartPlacing
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 11400000, guid: 2eeaa40729bb1304ba99c3d49b21d91b,
+            type: 2}
+          m_ObjectArgumentAssemblyTypeName: TowerSchematic, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1664802399
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21260,7 +21308,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 100
   m_Sprite: {fileID: 21300000, guid: df56436d3b43d4247beb33e2ddcdb136, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

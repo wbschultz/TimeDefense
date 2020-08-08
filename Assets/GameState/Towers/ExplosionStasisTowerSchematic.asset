@@ -16,7 +16,7 @@ MonoBehaviour:
   towerDescription: Explode and stop your enemies at the same time
   towerCost: 0
   towerDamage: 10
-  towerRange: 7
+  towerRange: 9
   towerFireRate: 1
   statusDuration: 1
   statusEffect: {fileID: 11400000, guid: aa2eebc8e0cab0f479752bb2e8109f7b, type: 2}
