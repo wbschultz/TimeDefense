@@ -7,7 +7,7 @@ public class CentralCore : MonoBehaviour
 {
     // health of core
     [SerializeField]
-    private int health = 200;
+    public int health = 200;
 
     // components
 
