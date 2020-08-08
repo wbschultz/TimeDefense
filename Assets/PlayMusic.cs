@@ -6,6 +6,7 @@ public class PlayMusic : MonoBehaviour
 {
     public void Play(AudioClip clip)
     {
+        MusicManager.Instance.StopMusic();
         MusicManager.Instance.SetEffectsVolume(MusicManager.Instance.music_vol);
         MusicManager.Instance.PlayEffect(clip);
     } 

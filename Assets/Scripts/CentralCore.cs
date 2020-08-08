@@ -24,7 +24,7 @@ public class CentralCore : MonoBehaviour
     {
         if(dataPlayer.currentCoreHp <= 0)
         {
-
+            GameObject.FindObjectOfType<LevelLoader>().LoadLevel("Game Over");
         }
     }
 
