@@ -26,7 +26,7 @@ public class PlayerData : ScriptableObject
         // Initialize player's current data.
         currentPlayerHp = maxPlayerHp;
         currentCoreHp = maxCoreHp;
-        currentMunny = maxMunny;
+        currentMunny = startMunny;
 
         // Let all listeners know player's data has changed.
         if (onPlayerHpChange != null) onPlayerHpChange.Invoke();

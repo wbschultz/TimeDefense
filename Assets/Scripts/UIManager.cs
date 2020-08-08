@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    public CentralCore CentralTower;
+    public PlayerData dataPlayer;
     public TextMeshProUGUI TowerHealthUI;
     public TextMeshProUGUI TotalMoneyUI;
     public TextMeshProUGUI BoltTowerCostUI;
@@ -17,18 +17,23 @@ public class UIManager : MonoBehaviour
     void OnEnable()
     {
         UpdateUI();
-        CentralCore.onDamage += UpdateUI;
+        dataPlayer.onCoreHpChange += UpdateUI;
+        dataPlayer.onMunnyChange += UpdateUI;
+
     }
 
 
     private void OnDisable()
     {
-        CentralCore.onDamage -= UpdateUI;
+        dataPlayer.onCoreHpChange -= UpdateUI;
+        dataPlayer.onMunnyChange -= UpdateUI;
     }
 
 
     public void UpdateUI()
     {
-        TowerHealthUI.text = CentralTower.health.ToString();
+        TowerHealthUI.text = dataPlayer.currentCoreHp.ToString();
+        TotalMoneyUI.text = dataPlayer.currentMunny.ToString();
+
     }
 }
