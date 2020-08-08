@@ -30,7 +30,7 @@ public class MusicManager : MonoBehaviour
         {
             Instance = this;
         }
-        else if (Instance != this) //Otherwise, destroy this gameobject to enforce the singleton
+        else if (Instance != this) // Otherwise, destroy this gameobject to enforce the singleton
         {
             Destroy(gameObject);
         }
@@ -106,6 +106,7 @@ public class MusicManager : MonoBehaviour
     {
         StopTitle();
         track_number = 1;
+        SetMusicVolume(music_vol);
         track1.Play();
         track2.Play();
         track3.Play();
