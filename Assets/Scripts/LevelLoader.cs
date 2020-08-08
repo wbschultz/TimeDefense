@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LevelLoader : SingletonBase<LevelLoader>
+public class LevelLoader : MonoBehaviour
 {
     /// <summary>
     /// Load level by build index
