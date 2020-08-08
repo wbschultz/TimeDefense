@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     public float movespeed = 5f;
 
     public Rigidbody2D rb;
-    public Camera cam;
+    public Animator anim;
 
     Vector2 movement;
     Vector2 mousePos;
@@ -24,6 +24,14 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if(movement.x != 0 || movement.y != 0)
+        {
+            anim.SetBool("IsRunning", true);
+        } else
+        {
+            anim.SetBool("IsRunning", false);
+        }
     }
 
     private void FixedUpdate()
