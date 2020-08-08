@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb6d4c3d39f40934b88c562f5eac92c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 30
+  speed: 15
   projectileImpact: {fileID: 5884502919389894830, guid: ff17f1c182bd67a4686f0ef84c7c243c,
     type: 3}
-  explosionRadius: 5
+  explosionRadius: 3
