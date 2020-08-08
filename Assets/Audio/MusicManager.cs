@@ -17,7 +17,7 @@ public class MusicManager : MonoBehaviour
     public bool transition;
     public float transition_rate = 0.5f;
     public AudioSource effects_source;
-    public Slider music_slider, effects_slider;
+    public float music_vol, effects_vol;
 
     public static MusicManager Instance = null;
     // Update is called once per frame
@@ -42,8 +42,6 @@ public class MusicManager : MonoBehaviour
     private void Start()
     {
         track_number = 0;
-        SetEffectsVolume(effects_slider.value); //set the volume to what the slider is initially set to
-        SetMusicVolume(music_slider.value); //set the volume to what the slider is initially set to
     }
 
     void Update()
@@ -121,7 +119,7 @@ public class MusicManager : MonoBehaviour
     public void StopMusic()
     {
         track1.Stop();
-        track1.volume = music_slider.value;
+        track1.volume = music_vol;
         track2.Stop();
         track2.volume = 0;
         track3.Stop();
