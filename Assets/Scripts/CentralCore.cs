@@ -5,26 +5,10 @@ using UnityEngine;
 
 public class CentralCore : MonoBehaviour
 {
-    // health of core
-    [SerializeField]
-    private int health = 200;
+    public PlayerData dataPlayer;
 
     // components
-
-    //events
-    public static event Action onDeath;
-    public static event Action onDamage;
-
-    private void Update()
-    {
-        if(health <= 0)
-        {
-            if (onDeath != null)
-            {
-                onDeath.Invoke();
-            }
-        }
-    }
+   
 
     /// <summary>
     /// Apply damage to core health
@@ -32,11 +16,27 @@ public class CentralCore : MonoBehaviour
     /// <param name="dmg">amount of damage to deal</param>
     public void DamageCore(int dmg)
     {
-        health -= dmg;
-        if (onDamage != null)
-        {
-            onDamage.Invoke();
-        }
+        dataPlayer.DamageCore(dmg);
 
+    }
+
+    private void CheckIfDead()
+    {
+        if(dataPlayer.currentCoreHp <= 0)
+        {
+
+        }
+    }
+
+
+    private void OnEnable()
+    {
+        dataPlayer.onCoreHpChange += CheckIfDead;
+            
+    }
+
+    private void OnDisable()
+    {
+        dataPlayer.onCoreHpChange -= CheckIfDead;
     }
 }
