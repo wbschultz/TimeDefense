@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6204544398629537803}
   - component: {fileID: 7845657336228253160}
+  - component: {fileID: 668651932433341082}
   m_Layer: 0
   m_Name: PlayerRun_3
   m_TagString: Untagged
@@ -82,6 +83,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &668651932433341082
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 955073425519291224}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 577af7b68650ed94cac52b9f75d33f11, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &4216023454212653867
 GameObject:
   m_ObjectHideFlags: 0
@@ -152,7 +172,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 5
   rb: {fileID: 4216023454212653861}
-  cam: {fileID: 0}
+  anim: {fileID: 668651932433341082}
 --- !u!114 &4216023454212653862
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +188,7 @@ MonoBehaviour:
   firepoint: {fileID: 4216023454616873623}
   bulletPrefab: {fileID: 3676456277525693402, guid: fcd2f8c6b621a1243ad7817cdd2179e2,
     type: 3}
+  placementManager: {fileID: 0}
   bulletForce: 20
 --- !u!1 &4216023454616873620
 GameObject:
