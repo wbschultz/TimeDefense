@@ -148,6 +148,7 @@ public class MusicManager : MonoBehaviour
     }
     public void SetMusicVolume(float vol)
     {
+
         music_vol = vol;
         if (vol > 1)
             vol = 1;

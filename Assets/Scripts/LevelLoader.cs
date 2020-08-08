@@ -6,7 +6,7 @@ using UnityEngine.Events;
 
 public class LevelLoader : MonoBehaviour
 {
-
+    // not necessary, but used to start title music right now
     public UnityEvent onStart;
 
     private void Start()
