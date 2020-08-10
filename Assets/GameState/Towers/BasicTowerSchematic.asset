@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   towerName: Energy Bolt Tower
   towerDescription: Smite your enemies with power generated ethically?
-  towerCost: 30
-  towerDamage: 8
-  towerRange: 7
+  towerCost: 40
+  towerDamage: 5
+  towerRange: 5
   towerFireRate: 1
   statusDuration: 2
   statusEffect: {fileID: 0}
