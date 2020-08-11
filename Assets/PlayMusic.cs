@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class PlayMusic : MonoBehaviour
 {
-    public void Play(AudioClip clip)
+    public void Play(Sound s)
     {
         MusicManager.Instance.StopMusic();
-        MusicManager.Instance.SetEffectsVolume(MusicManager.Instance.music_vol);
-        MusicManager.Instance.PlayEffect(clip);
+        MusicManager.Instance.SetGlobalVol(MusicManager.Instance.globalVol);
+        MusicManager.Instance.PlayOther(s);
     } 
 
     public void Game()
     {
-        MusicManager.Instance.PlayMusic();
+        MusicManager.Instance.PlayMain();
     }
 }

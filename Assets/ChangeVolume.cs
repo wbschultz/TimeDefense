@@ -5,14 +5,10 @@ using UnityEngine.UI;
 
 public class ChangeVolume : MonoBehaviour
 {
-    private void Awake()
-    {
-        GetComponent<Slider>().value = MusicManager.Instance.music_vol;
-    }
-
     // Start is called before the first frame update
     void Start()
     {
+        GetComponent<Slider>().value = MusicManager.Instance.globalVol;
         gameObject.GetComponent<Slider>().onValueChanged.AddListener(SetVolume);
     }
 
@@ -24,6 +20,6 @@ public class ChangeVolume : MonoBehaviour
 
     public void SetVolume(float val)
     {
-        MusicManager.Instance.SetMusicVolume(val);
+        MusicManager.Instance.SetGlobalVol(val);
     }
 }
