@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4874552047930425518}
   - component: {fileID: 4874552047930425517}
   m_Layer: 0
-  m_Name: Layer2
+  m_Name: Channel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -298,7 +298,7 @@ GameObject:
   - component: {fileID: 4874552048276343618}
   - component: {fileID: 4874552048276343617}
   m_Layer: 0
-  m_Name: Layer1
+  m_Name: Channel1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
