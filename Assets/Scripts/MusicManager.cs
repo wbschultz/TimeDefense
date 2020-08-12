@@ -59,9 +59,10 @@ public class MusicManager : SingletonBase<MusicManager>
 
             if (sameTime)
             {
-                nextChannel.time = channel1.time;
+                nextChannel.time = currChannel.time;
             }
             nextChannel.Play();
+            currChannel.volume = 0;
             currChannel.Stop();
             isMainChannel = !isMainChannel;
         }
@@ -85,11 +86,14 @@ public class MusicManager : SingletonBase<MusicManager>
 
     public void TransitionMusic()
     {
-        // increment track number
-        layerNumber = layerNumber == 4 ? 0 : layerNumber + 1;
+        if(layerNumber != 4)
+        {
+            // increment track number
+            layerNumber = Mathf.Min(4, layerNumber + 1);
 
-        // transition layer via channeled source
-        layerSource.TransitionChannel(mainTracks[layerNumber], true);
+            // transition layer via channeled source
+            layerSource.TransitionChannel(mainTracks[layerNumber], true);
+        }
     }
 
 
