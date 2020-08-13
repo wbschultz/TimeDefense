@@ -2,6 +2,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+///<summary>
+///Scriptable object to wrap multiple sound clips into a layered sound clip
+///
+///Provides functions to change layers at runtime, and save the current layer
+///between play sessions.
+///</summary>
 [CreateAssetMenu(fileName = "Layered Sound Clip", menuName = "Types/Layered Sound Clip")]
 public class LayeredSound : Sound
 {
@@ -9,6 +15,9 @@ public class LayeredSound : Sound
     public int currentLayerIndex = 0;
     public List<Sound> layers = new List<Sound>();
 
+    /// <summary>
+    /// Transition to the next layer in the list, iff a next layer exists
+    /// </summary>
     public void NextLayer()
     {
         if (currentLayerIndex != layers.Count-1)
@@ -21,7 +30,7 @@ public class LayeredSound : Sound
     }
 
     /// <summary>
-    /// 
+    /// Reset layered sound to be base layer (layer 0)
     /// </summary>
     public void ResetLayers()
     {
@@ -29,6 +38,22 @@ public class LayeredSound : Sound
 
         UpdateLayer();
         
+    }
+
+    /// <summary>
+    /// Set layered sound to specific index
+    /// </summary>
+    /// <param name="index">index of layer in list</param>
+    public void SetLayer(int index)
+    {
+        if (index < layers.Count && index >= 0)
+        {
+            currentLayerIndex = index;
+            UpdateLayer();
+        } else
+        {
+            Debug.LogError("Attempted to pass out of bounds index to SetLayer");
+        }
     }
 
     /// <summary>

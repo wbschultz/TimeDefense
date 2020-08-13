@@ -468,4 +468,4 @@ MonoBehaviour:
   globalVol: 0.2
   layer1: {fileID: 4874552048276343617}
   layer2: {fileID: 4874552047930425517}
-  other: {fileID: 4874552047741989562}
+  sceneSounds: {fileID: 11400000, guid: 379c162ff679c0b4a85189234909367d, type: 2}

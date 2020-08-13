@@ -2,6 +2,12 @@
 using UnityEngine;
 using System.Collections.Generic;
 
+/// <summary>
+/// Scriptable object to wrap audio clips into a sound clip object
+/// 
+/// Allows control over pitch, volume, and looping behavior of the clip
+/// to tune audio files for use in the game.
+/// </summary>
 [CreateAssetMenu(fileName = "Sound Clip", menuName = "Types/Sound Clip")]
 public class Sound : ScriptableObject
 {

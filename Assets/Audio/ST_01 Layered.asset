@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7bf744a987ef2f148b0de9b41ec0e690, type: 3}
+  m_Name: ST_01 Layered
+  m_EditorClassIdentifier: 
+  clip: {fileID: 0}
+  volume: 1
+  pitch: 1
+  loop: 0
+  currentLayerIndex: 0
+  layers:
+  - {fileID: 11400000, guid: 71955314533c7554dbd6016dde1da00b, type: 2}
+  - {fileID: 11400000, guid: f57a5198db54fb943b0dcdf9e13ba32f, type: 2}
+  - {fileID: 11400000, guid: 7220bcf79b06eac42b713e1c47e29460, type: 2}
+  - {fileID: 11400000, guid: 3dd7b32d3bf06a04fb3819532f3a957d, type: 2}
+  - {fileID: 11400000, guid: 2fb44c811f7f17340aec0aa3d9cd0396, type: 2}
