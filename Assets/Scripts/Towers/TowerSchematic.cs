@@ -43,7 +43,7 @@ public abstract class TowerSchematic : ScriptableObject
         if (towerGO)
         {
             // Just display default tower sprite for now.
-            SpriteRenderer towerRenderer = towerGO.GetComponent<SpriteRenderer>();
+            SpriteRenderer towerRenderer = towerGO.GetComponentInChildren<SpriteRenderer>();    // Find SpriteRenderer and update sprite
             if (towerRenderer)
             {
                 towerRenderer.sprite = towerSprite;
