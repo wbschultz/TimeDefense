@@ -42,11 +42,36 @@ public abstract class TowerSchematic : ScriptableObject
     {
         if (towerGO)
         {
-            // Just display default tower sprite for now.
+            // Just display specified tower sprite
             SpriteRenderer towerRenderer = towerGO.GetComponentInChildren<SpriteRenderer>();    // Find SpriteRenderer and update sprite
             if (towerRenderer)
             {
                 towerRenderer.sprite = towerSprite;
+            }
+
+            // start particle system
+            ParticleSystem spawnParticles = towerGO.GetComponentInChildren<ParticleSystem>();
+            if (spawnParticles)
+            {
+                spawnParticles.Play();
+            }
+
+            // tween the tower
+            MoveTween tweener = towerGO.GetComponentInChildren<MoveTween>();
+            if (tweener)
+            {
+                // local function as callback to stop particle effect and unsubscribe itself
+                void callback()
+                {
+                    if (spawnParticles)
+                    {
+                        spawnParticles.Stop();
+                    }
+                    tweener.onComplete.RemoveListener(callback);
+                }
+
+                tweener.onComplete.AddListener(callback);
+                tweener.MoveLocally(Vector3.zero);
             }
         }
     }
