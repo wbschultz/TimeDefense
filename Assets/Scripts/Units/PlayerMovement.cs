@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -10,9 +11,13 @@ public class PlayerMovement : MonoBehaviour
     public Animator anim;
 
     Vector2 movement;
+    Vector2 previousMovement = Vector2.zero;
     Vector2 mousePos;
 
     Vector3 charScale;
+
+    // event to notify scripts (like shooting script) of changes to player direction
+    public static event Action<Vector2> OnDirectionChange;
 
     private void Start()
     {
@@ -24,13 +29,19 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-
-        if(movement.x != 0 || movement.y != 0)
+        if(movement != previousMovement)
         {
-            anim.SetBool("IsRunning", true);
-        } else
-        {
-            anim.SetBool("IsRunning", false);
+            previousMovement = movement;
+            if (movement != Vector2.zero)
+            {
+                // only want to update directions when non-zero
+                OnDirectionChange.Invoke(movement);
+                anim.SetBool("IsRunning", true);
+            }
+            else
+            {
+                anim.SetBool("IsRunning", false);
+            }
         }
     }
 

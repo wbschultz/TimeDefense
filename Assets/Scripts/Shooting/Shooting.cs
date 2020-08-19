@@ -11,8 +11,18 @@ public class Shooting : MonoBehaviour
 
     public float bulletForce = 20f;
 
-    Vector3 movement;
+    Vector2 m_movement = new Vector2(1,0);
     bool isBuildMode;
+
+    private void OnEnable()
+    {
+        PlayerMovement.OnDirectionChange += GetNewDirection;
+    }
+
+    private void OnDisable()
+    {
+        PlayerMovement.OnDirectionChange -= GetNewDirection;
+    }
 
     // Update is called once per frame
     void Update()
@@ -27,13 +37,16 @@ public class Shooting : MonoBehaviour
             Shoot();
         }
     }
-    
+
+    private void GetNewDirection(Vector2 movement)
+    {
+        m_movement = movement;
+    }
+
     void Shoot()
     {
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
         GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
         Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(movement * bulletForce, ForceMode2D.Impulse);
+        rb.AddForce(m_movement * bulletForce, ForceMode2D.Impulse);
     }
 }
