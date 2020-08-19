@@ -8,6 +8,30 @@ TextureImporter:
   - first:
       213: 4662528254725628176
     second: 4x4Rubble_1
+  - first:
+      213: -8514293205441894174
+    second: 4x4Rubble_0
+  - first:
+      213: 2451537354993745118
+    second: 4x4Rubble_1
+  - first:
+      213: 687594643378177831
+    second: 4x4Rubble_2
+  - first:
+      213: 8444548649915226795
+    second: 4x4Rubble_3
+  - first:
+      213: -6893858308579736482
+    second: 4x4Rubble_4
+  - first:
+      213: -3018373187801117107
+    second: 4x4Rubble_5
+  - first:
+      213: 213493781139317673
+    second: 4x4Rubble_6
+  - first:
+      213: 3274158807259957022
+    second: 4x4Rubble_7
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -97,9 +121,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 32
-        height: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -107,8 +131,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47541c8756f2067b0800000000000000
-      internalID: -5233130654140381836
+      spriteID: 2e82d18b07727d980800000000000000
+      internalID: -8514293205441894174
       vertices: []
       indices: 
       edges: []
@@ -117,10 +141,10 @@ TextureImporter:
       name: 4x4Rubble_1
       rect:
         serializedVersion: 2
-        x: 32
-        y: 0
-        width: 32
-        height: 32
+        x: 16
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +152,134 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 011a42a9eb0a4b040800000000000000
-      internalID: 4662528254725628176
+      spriteID: edcb00e4c3c950220800000000000000
+      internalID: 2451537354993745118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_2
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72784046fa3da8900800000000000000
+      internalID: 687594643378177831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baa93b68140113570800000000000000
+      internalID: 8444548649915226795
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54ca31c4681450a0800000000000000
+      internalID: -6893858308579736482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4e0d85e3959c16d0800000000000000
+      internalID: -3018373187801117107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_6
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3609a767b76f200800000000000000
+      internalID: 213493781139317673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4x4Rubble_7
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1742f48616207d20800000000000000
+      internalID: 3274158807259957022
       vertices: []
       indices: 
       edges: []
