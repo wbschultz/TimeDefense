@@ -66,6 +66,11 @@ public abstract class TowerSchematic : ScriptableObject
                     if (spawnParticles)
                     {
                         spawnParticles.Stop();
+                        SpriteMask mask = towerGO.GetComponentInChildren<SpriteMask>();
+                        if(mask)
+                            Destroy(mask.gameObject);
+                        if (towerRenderer)
+                            towerRenderer.maskInteraction = SpriteMaskInteraction.None;
                     }
                     tweener.onComplete.RemoveListener(callback);
                 }
