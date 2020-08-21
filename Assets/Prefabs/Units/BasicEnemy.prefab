@@ -292,6 +292,7 @@ GameObject:
   - component: {fileID: 4767608483362598282}
   - component: {fileID: 4056848529611291222}
   - component: {fileID: 7634851243361510122}
+  - component: {fileID: 2796806330335796670}
   m_Layer: 0
   m_Name: GruntSprite
   m_TagString: Untagged
@@ -350,8 +351,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 913483811
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 5b6fc2e38dec1de479592eaf3e6f3525, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -390,6 +391,18 @@ MonoBehaviour:
     m_Extent: {x: 0.43038476, y: 0.5525852, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
+--- !u!114 &2796806330335796670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6435660972184333957}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23698dd3dd11db140885ed6b11dae15d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7059187377349007135
 GameObject:
   m_ObjectHideFlags: 0
