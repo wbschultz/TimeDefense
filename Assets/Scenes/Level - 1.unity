@@ -240,8 +240,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7845657336228253160, guid: 22034e7e50d10214b9605c7668fc40c0,
         type: 3}
-      propertyPath: m_SortingOrder
-      value: 2
+      propertyPath: m_SpriteSortPoint
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22034e7e50d10214b9605c7668fc40c0, type: 3}
@@ -391,8 +391,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1815933955
+  m_SortingLayer: 1
   m_SortingOrder: -1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -5971,8 +5971,8 @@ TilemapRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1815933955
+  m_SortingLayer: 1
   m_SortingOrder: -2
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -22431,7 +22431,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
-  m_SortingLayerID: 0
+  m_SortingLayerID: -2008387863
   m_SortingOrder: 100
   m_TargetDisplay: 0
 --- !u!224 &1536148553
@@ -24122,12 +24122,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1356662559096329205, guid: 66f2be3556ca2cc42a8c2e9701f5acc8,
-        type: 3}
-      propertyPath: dataPlayer
-      value: 
-      objectReference: {fileID: 11400000, guid: ebf84e04294775f45b464c10e1e169fa,
-        type: 2}
     - target: {fileID: 1356662559096329206, guid: 66f2be3556ca2cc42a8c2e9701f5acc8,
         type: 3}
       propertyPath: m_Name

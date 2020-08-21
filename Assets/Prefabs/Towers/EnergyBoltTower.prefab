@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6436343914743883553}
   - component: {fileID: 2388655583888075188}
   m_Layer: 0
-  m_Name: EnergyBoltTower
+  m_Name: TowerCenterScript
   m_TagString: Tower
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -386,7 +386,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 1
-  m_SpriteSortPoint: 0
+  m_SpriteSortPoint: 1
 --- !u!114 &9008024349102402823
 MonoBehaviour:
   m_ObjectHideFlags: 0
