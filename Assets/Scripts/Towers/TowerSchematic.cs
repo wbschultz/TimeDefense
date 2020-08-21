@@ -76,7 +76,7 @@ public abstract class TowerSchematic : ScriptableObject
                 }
 
                 tweener.onComplete.AddListener(callback);
-                tweener.MoveLocally(Vector3.zero);
+                tweener.MoveLocally(Vector3.down);
             }
         }
     }

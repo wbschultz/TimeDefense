@@ -62,9 +62,9 @@ public class PlacementManager : MonoBehaviour
                 // get distance vector from player to mouse
                 playerToMouse = UtilsClass.GetMouseWorldPosition() - player.transform.position;
             }
-            
+
             // reduce magnitude of vector to 3, or current magnitude, whichever is shorter
-            playerToMouse = (Mathf.Min(3f, playerToMouse.magnitude) * playerToMouse.normalized) + player.transform.position + new Vector3(0.5f, 0.5f, 0);
+            playerToMouse = (Mathf.Min(3f, playerToMouse.magnitude) * playerToMouse.normalized) + player.transform.position;
             // fix ghost sprite (preview) to the mouse position
             ghostSprite.gameObject.transform.position =
                 grid.SnapPosition(playerToMouse // position in grid
