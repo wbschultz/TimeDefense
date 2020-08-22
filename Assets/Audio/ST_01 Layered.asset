@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7bf744a987ef2f148b0de9b41ec0e690, type: 3}
   m_Name: ST_01 Layered
   m_EditorClassIdentifier: 
-  clip: {fileID: 0}
+  clip: {fileID: 8300000, guid: c492fd1d655da9949bf6cc13dc45c983, type: 3}
   volume: 1
   pitch: 1
-  loop: 0
+  loop: 1
   currentLayerIndex: 0
   layers:
   - {fileID: 11400000, guid: 71955314533c7554dbd6016dde1da00b, type: 2}
