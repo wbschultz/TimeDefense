@@ -44,12 +44,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e30d286699377d145887de660ab65f64, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  debugGrid: 0
+  dataPlayer: {fileID: 11400000, guid: ebf84e04294775f45b464c10e1e169fa, type: 2}
+  buildMode: 0
+  pathGrid: {fileID: 0}
   ghostSprite: {fileID: 1356662559357045628}
   width: 48
   height: 36
   cellSize: 1
-  dataPlayer: {fileID: 11400000, guid: ebf84e04294775f45b464c10e1e169fa, type: 2}
-  buildMode: 0
 --- !u!1 &1356662559357045629
 GameObject:
   m_ObjectHideFlags: 0

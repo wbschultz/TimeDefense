@@ -12,6 +12,14 @@ using CodeMonkey.Utils;
 /// </summary>
 public class PlacementManager : MonoBehaviour
 {
+
+    #region publics
+    public bool debugGrid;
+    public PlayerData dataPlayer;
+    public bool buildMode = false;
+    #endregion
+
+    #region serialized privates
     [SerializeField]
     SpriteRenderer ghostSprite;
     [SerializeField]
@@ -20,28 +28,30 @@ public class PlacementManager : MonoBehaviour
     private int height = 36;
     [SerializeField]
     private float cellSize = 1f;
+    #endregion
 
-    public PlayerData dataPlayer;
-
+    #region privates
     private Grid grid;
     private GameObject player;
+    private UnityEngine.Tilemaps.Tilemap pathGrid;
 
     private bool onUpgradeMenu = false;
     private TowerSchematic selectedTower;
     private readonly Color buildModeWhite = new Color(1f, 1f, 1f, 0.4f);    // color for valid placement
     private readonly Color buildModeRed = new Color(1f, 0f, 0f, 0.3f);      // color for invalid placement
-
-    public bool buildMode = false;
+    #endregion
 
     private void Awake()
     {
-        grid = new Grid(width, height, cellSize, transform.position);
+        grid = new Grid(width, height, cellSize, transform.position, debugGrid);
     }
 
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        pathGrid = GameObject.FindGameObjectWithTag("Path").GetComponent<UnityEngine.Tilemaps.Tilemap>();
+        InvalidatePathPlacement();
     }
 
     // Update is called once per frame
@@ -89,6 +99,21 @@ public class PlacementManager : MonoBehaviour
                 if (Input.GetMouseButton(0))
                     CancelPlacing();
                 
+            }
+        }
+    }
+
+    /// <summary>
+    /// Set value in grid based on whether tile exists on the path grid
+    /// </summary>
+    private void InvalidatePathPlacement()
+    {
+        for (int x = 0; x < width; x++)
+        {
+            for (int y = 0; y < height; y++)
+            {
+                Vector3Int tilePosition = Vector3Int.FloorToInt(transform.position + new Vector3(x, y));
+                grid.SetValue(x, y, pathGrid.HasTile(tilePosition)?1:0);
             }
         }
     }

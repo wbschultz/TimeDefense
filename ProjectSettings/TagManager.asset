@@ -10,6 +10,7 @@ TagManager:
   - Waypoint
   - ProjectileSpawn
   - Core
+  - Path
   layers:
   - Default
   - TransparentFX
