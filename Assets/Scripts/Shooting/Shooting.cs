@@ -28,10 +28,8 @@ public class Shooting : MonoBehaviour
     void Update()
     {
         bool isMouseOverUI = EventSystem.current.IsPointerOverGameObject();
-        isBuildMode = placementManager.buildMode;
         
         if (!isMouseOverUI 
-            && !isBuildMode
             && Input.GetButtonDown("Fire1"))
         {
             Shoot();
@@ -45,8 +43,13 @@ public class Shooting : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
-        Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
-        rb.AddForce(m_movement * bulletForce, ForceMode2D.Impulse);
+        isBuildMode = placementManager.buildMode;
+
+        if (!isBuildMode)
+        {
+            GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation);
+            Rigidbody2D rb = bullet.GetComponent<Rigidbody2D>();
+            rb.AddForce(m_movement * bulletForce, ForceMode2D.Impulse);
+        }
     }
 }
